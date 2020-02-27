@@ -1,32 +1,95 @@
+@import '../../styles/global-styles.scss';
+
 .home-page {
-  
-  h2 {
-    font-size: 1.5em;
-  }
-  
-  section {
-    margin: 3em auto;
+  background-color: gray;;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 150px 1fr;
+  grid-template-rows: 1fr 300px 1fr $gutter-size;
+  grid-column-gap: 5px;
 
-    &:first-child {
-      margin-top: 0;
+  .archway {
+    border-top-left-radius: 100% 60%;
+    border-top-right-radius: 100% 60%;
+    background: #231f1a;
+    margin-top: 5px;
+    background: radial-gradient(#ab9338, transparent);
+    // background: radial-gradient(indianred, transparent);
+    // background: radial-gradient(red, transparent);
+
+    &:nth-of-type(1){
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      border-radius: 0;
+      // background-image: url('../../images/img-02.png');
+      // background-size: auto 100%;
+      // opacity: 1;
+      // filter: invert(.65);
     }
-
-    &.centered {
-      text-align: center;
+    &:nth-of-type(2){
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      display: grid;
+      z-index: 2;
+    }
+    &:nth-of-type(3){
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-template-rows: 1fr 1fr 1fr;
+      border: 0px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      
+    }
+    &:nth-of-type(4){
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 4;
     }
   }
 
-  form {
-    margin-bottom: 1em;
-
-    input {
-      outline: none;
-      border-bottom: 1px dotted #999;
-    }
+  .window {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    // grid-row-start: 1;
+    // grid-row-end: 4;
+    align-self: stretch;
   }
 
-  span.at-prefix {
-    color: black;
-    margin-left: 0.4em;
+  .faerie-orb {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* grid-column-start: 1; */
+    margin: auto;
   }
 }
+
+// .header {
+//   border: 5px solid grey;
+//   .nav-bar * {
+//     background: white;
+//     font-family: "Sabon";
+//     color: black!important;
+//     font-size: 10px;
+//     line-height: 20px;
+//   }
+//   &:hover {
+//     * {
+//       // font-family: "Sabon";
+//       color: pink;
+//     }
+//   }
+// }

@@ -1,1 +1,20 @@
 @import './global-styles.scss';
+
+.loader {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(0deg, $theme-nav 0%, $theme-link 100%);;
+  animation: load 2s infinite linear;
+}
+@keyframes load {
+  50% {
+    transform: scale(3);
+    filter: hue-rotate(180deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    filter: hue-rotate(360deg);
+  }
+}

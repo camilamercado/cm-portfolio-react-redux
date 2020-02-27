@@ -1,44 +1,54 @@
-import { LOAD_REPOS_SUCCESS, LOAD_REPOS, LOAD_REPOS_ERROR } from './constants';
+import {
+  LOAD_PORTFOLIO, LOAD_PORTFOLIO_SUCCESS, UPDATE_MEDIA_SETTING, SET_PORTFOLIO_CURRENT
+} from './constants';
 
 // The initial state of the App
 export const initialState = {
-  loading: false,
-  error: false,
-  currentUser: false,
-  userData: {
-    repositories: false,
+  portfolio: [
+    {
+      projectTitle: 'Software Studios', link: 'www.software-studios.com', tags: ['Shopify', 'SCSS'], media: [{ mediaSrc: 'software-studios_04.png', caption: 'Felicia', local: true }]
+    }
+  ],
+  portfolioCurrent: {
+    projectTitle: 'Software Studios', link: 'www.software-studios.com', tags: ['Shopify', 'SCSS'], media: [{ mediaSrc: 'software-studios_04.png', caption: 'Felicia', local: true }]
   },
+  mediaSetting: false,
 };
 
 function appReducer(state = initialState, action) {
   switch (action.type) {
-    case LOAD_REPOS: {
+    case LOAD_PORTFOLIO: {
       const newState = {
         ...state,
-        loading: true,
-        error: false,
-        userData: {
-          repositories: false,
-        },
-      };
-
-      return newState;
-    }
-    case LOAD_REPOS_SUCCESS: {
-      const newState = {
-        ...state,
-        loading: false,
-        userData: {
-          repositories: action.repos,
-        },
-        currentUser: action.username,
+        portfolio: false,
       };
       return newState;
     }
 
-    case LOAD_REPOS_ERROR: {
-      return { ...state, error: action.error, loading: false };
+    case SET_PORTFOLIO_CURRENT: {
+      const newState = {
+        ...state,
+        portfolioCurrent: action.entry,
+      };
+      return newState;
     }
+
+    case LOAD_PORTFOLIO_SUCCESS: {
+      const newState = {
+        ...state,
+        portfolio: action.portfolio,
+      };
+      return newState;
+    }
+
+    case UPDATE_MEDIA_SETTING: {
+      const newState = {
+        ...state,
+        mediaSetting: action.setting,
+      };
+      return newState;
+    }
+
     default:
       return state;
   }

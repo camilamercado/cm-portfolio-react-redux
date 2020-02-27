@@ -5,24 +5,19 @@ const selectGlobal = (state) => state.global || initialState;
 
 const selectRoute = (state) => state.router;
 
-const makeSelectCurrentUser = () => createSelector(
+const makeSelectPortfolio = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.currentUser
+  (globalState) => globalState.portfolio
 );
 
-const makeSelectLoading = () => createSelector(
+const makeSelectPortfolioCurrent = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.loading
+  (globalState) => globalState.portfolioCurrent
 );
 
-const makeSelectError = () => createSelector(
+const makeSelectMediaSetting = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.error
-);
-
-const makeSelectRepos = () => createSelector(
-  selectGlobal,
-  (globalState) => globalState.userData.repositories
+  (globalState) => globalState.mediaSetting
 );
 
 const makeSelectLocation = () => createSelector(
@@ -32,9 +27,8 @@ const makeSelectLocation = () => createSelector(
 
 export {
   selectGlobal,
-  makeSelectCurrentUser,
-  makeSelectLoading,
-  makeSelectError,
-  makeSelectRepos,
+  makeSelectPortfolio,
   makeSelectLocation,
+  makeSelectPortfolioCurrent,
+  makeSelectMediaSetting,
 };

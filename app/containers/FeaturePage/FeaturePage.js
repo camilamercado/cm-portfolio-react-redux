@@ -1,67 +1,84 @@
-/*
- * FeaturePage
- *
- * List all the features
- */
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { Component } from 'react';
+import MediaViewer from 'components/MediaViewer';
+
+import {
+  Link,
+} from 'react-router-dom';
 import './style.scss';
+import PropTypes from 'prop-types';
 
-export default class FeaturePage extends React.Component {
-  // eslint-disable-line react/prefer-stateless-function
+class FeaturePage extends Component { // eslint-disable-line react/prefer-stateless-function
+  componentDidMount() {
+    const { portfolio, updatePortfolioCurrent, match } = this.props;
+    const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
+    updatePortfolioCurrent(currentIndex);
+  }
 
-  // Since state and props are static,
-  // there's no need to re-render this component
-  shouldComponentUpdate() {
-    return false;
+  componentDidUpdate() {
+    const { portfolio, updatePortfolioCurrent, match } = this.props;
+    const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
+    updatePortfolioCurrent(currentIndex);
   }
 
   render() {
+    const {
+      portfolio, portfolioCurrent, mediaSetting, updateMediaSetting
+    } = this.props;
+    const current = portfolioCurrent;
+    const portfolioCount = portfolio.indexOf(portfolioCurrent);
+    const nextEntry = portfolioCount === portfolio.length - 1 ? portfolio[0] : portfolio[portfolioCount + 1];
+    const lastEntry = portfolioCount <= 0 ? portfolio[portfolio.length - 1] : portfolio[portfolioCount - 1];
+    const settingLabel = mediaSetting ? 'Reduce' : 'Expand';
+
+    if (portfolio.length < 3) {
+      return (
+        <section className="page-loader portfolio-spread">
+          <div className="loader"></div>
+        </section>
+      );
+    }
     return (
-      <div className="feature-page">
-        <Helmet>
-          <title>Feature Page</title>
-          <meta
-            name="description"
-            content="Feature page of React.js Boilerplate application"
-          />
-        </Helmet>
-        <h1>Features</h1>
-        <ul>
-          <li>
-            <p className="title">Next generation JavaScript</p>
+      <section className={current.theme ? `portfolio-spread ${settingLabel} ${current.theme}` : `portfolio-spread ${settingLabel}`}>
+        <div className="portfolio-nav last">
+          <Link to={`${lastEntry.id}`}>
+            <h2>L a s t</h2>
+            <span>{lastEntry.projectTitle}</span>
+          </Link>
+        </div>
+        <div className="left">
+          <MediaViewer media={current.media} mediaSetting={mediaSetting} updateMediaSetting={updateMediaSetting} />
+        </div>
+        <div className="right">
+          <div className="text-container">
+            <h1>{current.projectTitle}</h1>
+            <a className="link" href={current.link}>{current.link}</a>
+            <ul>
+              {current.tags.map((item) => <li key={item}>{item}</li>)}
+            </ul>
             <p>
-              Use template strings, object destructuring, arrow functions, JSX
-              syntax and more, today.
+              {current.text}
             </p>
-          </li>
-          <li>
-            <p className="title">Instant feedback</p>
-            <p>
-              Enjoy the best DX and code your app at the speed of thought! Your
-              saved changes to the CSS and JS are reflected instantaneously
-              without refreshing the page. Preserve application state even when
-              you update something in the underlying code!
-            </p>
-          </li>
-          <li>
-            <p className="title">Industry-standard routing</p>
-            <p>
-              {
-                "Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance."
-              }
-            </p>
-          </li>
-          <li>
-            <p className="title">The Best Test Setup</p>
-            <p>
-              Automatically guarantee code quality and non-breaking changes.
-              (Seen a react app with 99% test coverage before?)
-            </p>
-          </li>
-        </ul>
-        <i>and much more...</i>
-      </div>
+          </div>
+        </div>
+        <div className="text-buffer"></div>
+        <div className="portfolio-nav next">
+          <Link to={`${nextEntry.id}`}>
+            <h2>N e x t</h2>
+            <span>{nextEntry.projectTitle}</span>
+          </Link>
+        </div>
+      </section>
     );
   }
 }
+
+FeaturePage.propTypes = {
+  match: PropTypes.object,
+  portfolioCurrent: PropTypes.object,
+  portfolio: PropTypes.array,
+  updatePortfolioCurrent: PropTypes.func,
+  mediaSetting: PropTypes.bool,
+  updateMediaSetting: PropTypes.func,
+};
+
+export default FeaturePage;

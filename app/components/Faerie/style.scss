@@ -1,0 +1,78 @@
+@import '../../styles/global-styles.scss';
+
+* {
+  color: white;;
+}
+img.em {
+   position: absolute;
+  // top: 50vh;
+  // left: 50%;
+  // margin-top: -130px;
+  // margin-left: -60px;
+  width: 150px;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  padding: 20px;
+  -webkit-box-shadow: inset 0px -2px 48px -1px yellow;
+  -moz-box-shadow: inset 0px -2px 48px -1px yellow;
+  box-shadow: inset 0px -2px 48px -1px yellow;
+}
+
+img.em#t {
+  z-index: 2;
+  -webkit-box-shadow: 0px -2px 48px -1px yellow;
+  -moz-box-shadow: 0px -2px 48px -1px yellow;
+  box-shadow: 0px -2px 48px -1px yellow;
+}
+
+img.em#f {
+  z-index: 3;
+  box-shadow: none;
+}
+
+img.em {
+  animation-name: glow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  //filter: invert(.5);
+  border-radius: 0px;
+  &#t {
+    animation-name: glowBox;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: invert(1);
+    box-shadow: inset 0px -2px 48px -1px transparent;
+
+  }
+  to {
+    filter: invert(0.5);
+    // border-radius: 50%;    
+    box-shadow: inset 0px -2px 48px -1px transparent;
+
+
+
+  }
+}
+
+@keyframes glowBox {
+  from {
+    box-shadow: 0px -2px 48px -1px yellow;
+    box-shadow: 0px -2px 48px -1px #ab9338;
+    box-shadow: 0px -2px 48px -1px transparent;
+
+    filter: invert(1);
+  }
+  to {
+    filter: invert(0.5);
+    box-shadow: 0px -2px 48px -1px white;
+    box-shadow: 0px -2px 48px -1px transparent;
+
+  }
+}

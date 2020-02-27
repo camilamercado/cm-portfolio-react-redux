@@ -7,30 +7,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ReposList from 'components/ReposList';
+import Header from 'components/Header';
+import Faerie from 'components/Faerie';
 import './style.scss';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
    * when initial state username is not null, submit the form to load repos
    */
-  componentDidMount() {
-    const { username, onSubmitForm } = this.props;
-    if (username && username.trim().length > 0) {
-      onSubmitForm();
-    }
-  }
-
   render() {
-    const {
-      loading, error, repos, username, onChangeUsername, onSubmitForm
-    } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos
-    };
-
     return (
       <article>
         <Helmet>
@@ -38,40 +23,23 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           <meta name="description" content="A React.js Boilerplate application homepage" />
         </Helmet>
         <div className="home-page">
-          <section className="centered">
-            <h2>Start your next react project in seconds</h2>
-            <p>
-              A minimal <i>React-Redux</i> boilerplate with all the best practices
-            </p>
-          </section>
-          <section>
-            <h2>Try me!</h2>
-            <form onSubmit={onSubmitForm}>
-              <label htmlFor="username">
-                Show Github repositories by
-                <span className="at-prefix">@</span>
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="flexdinesh"
-                  value={username}
-                  onChange={onChangeUsername}
-                />
-              </label>
-            </form>
-            <ReposList {...reposListProps} />
-          </section>
+          <div className="archway">
+            <div className="sticker"></div>
+          </div>
+          <div className="archway">
+          </div>
+
+          <div className="archway">
+            <Faerie />
+          </div>
+          <div className="archway"></div>
         </div>
+        <Header {...this.props} />
       </article>
     );
   }
 }
 
 HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
-  onSubmitForm: PropTypes.func,
-  username: PropTypes.string,
-  onChangeUsername: PropTypes.func
+  onInit: PropTypes.func,
 };

@@ -16,48 +16,33 @@
  */
 
 import {
-  LOAD_REPOS,
-  LOAD_REPOS_SUCCESS,
-  LOAD_REPOS_ERROR,
+  LOAD_PORTFOLIO,
+  LOAD_PORTFOLIO_SUCCESS,
+  SET_PORTFOLIO_CURRENT,
+  UPDATE_MEDIA_SETTING,
 } from './constants';
 
-/**
- * Load the repositories, this action starts the request saga
- *
- * @return {object} An action object with a type of LOAD_REPOS
- */
-export function loadRepos() {
+export function loadPortfolio() {
+  return { type: LOAD_PORTFOLIO };
+}
+
+export function portfolioLoaded(portfolio) {
   return {
-    type: LOAD_REPOS,
+    type: LOAD_PORTFOLIO_SUCCESS,
+    portfolio,
   };
 }
 
-/**
- * Dispatched when the repositories are loaded by the request saga
- *
- * @param  {array} repos The repository data
- * @param  {string} username The current username
- *
- * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the repos
- */
-export function reposLoaded(repos, username) {
+export function updatePortfolioCurrent(entry) {
   return {
-    type: LOAD_REPOS_SUCCESS,
-    repos,
-    username,
+    type: SET_PORTFOLIO_CURRENT,
+    entry,
   };
 }
 
-/**
- * Dispatched when loading the repositories fails
- *
- * @param  {object} error The error
- *
- * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
- */
-export function repoLoadingError(error) {
+export function updateMediaSetting(setting) {
   return {
-    type: LOAD_REPOS_ERROR,
-    error,
+    type: UPDATE_MEDIA_SETTING,
+    setting,
   };
 }
