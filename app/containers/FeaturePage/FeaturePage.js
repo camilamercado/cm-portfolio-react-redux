@@ -51,7 +51,7 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
         <div className="right">
           <div className="text-container">
             <h1>{current.projectTitle}</h1>
-            <a className="link" href={current.link}>{current.link}</a>
+            <a className="link" rel="noopener noreferrer" target="_blank" href={current.link}>{current.linkTitle ? current.linkTitle : current.link }</a>
             <ul>
               {current.tags.map((item) => <li key={item}>{item}</li>)}
             </ul>

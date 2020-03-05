@@ -18,7 +18,7 @@
   padding: $gutter-size;
   background: $theme-base-secondary;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: calc(#{$gutter-size} * 2) calc(100vh - (#{$gutter-size} * 8)) calc(#{$gutter-size} * 2) calc(#{$gutter-size} * 2);
+  grid-template-rows: calc(#{$gutter-size} * 2) calc(100vh - (#{$gutter-size} * 7)) calc(#{$gutter-size} * 2) #{$gutter-size};
   grid-column-gap: $gutter-size;
   transition: 1s all ease;
   * {
@@ -80,9 +80,12 @@
       * { text-align: center; }
       h1 {
         font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.3em;
         text-transform: uppercase;
-        margin-bottom: 0px;
         letter-spacing: 1px;
+        max-width: 80%;
+        margin: 1em auto;
+        margin-bottom: 0px;
       }
       a {
         display: block;
@@ -152,6 +155,7 @@
     }
     span {
       @include Sabon(italic, 400);
+      display: none;
     }
     &.last {
       @include mobile-tablet { display: none; }

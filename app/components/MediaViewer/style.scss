@@ -63,6 +63,9 @@
     font-size: 0.9em;
     display: flex;
     justify-content: space-evenly;
+    * {
+      line-height: $gutter-size;
+    }
     .img-counter {
       @include Sabon(italic, 400);
       letter-spacing: 1px;;
