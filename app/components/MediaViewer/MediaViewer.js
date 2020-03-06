@@ -83,7 +83,7 @@ class MediaViewer extends React.Component {
             onClick={this.handleClickCounter}
             onKeyDown={this.handleClickCounter}
           >
-            (Click or Key)
+            Click or Key
           </div>
           <div className="img-counter">
             {newCount + 1}/{media.length}
@@ -95,7 +95,7 @@ class MediaViewer extends React.Component {
             onClick={this.handleClickExpander}
             onKeyDown={this.handleClickExpander}
           >
-            ({settingLabel} Media)
+            {settingLabel} Media
           </div>
         </div>
       </section>

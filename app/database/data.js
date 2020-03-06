@@ -1,6 +1,6 @@
 const data = [
   {
-    projectTitle: 'Software Studios Webstore+Portfolio',
+    projectTitle: 'Software Studios',
     id: 'software-studios',
     link: 'www.software-studios.com',
     tags: ['Shopify', 'SCSS'],
@@ -47,21 +47,20 @@ const data = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    projectTitle: 'Risk Pool',
+    projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
-    theme: 'dark',
     link: 'www.canopycanopycanopy.com',
     tags: ['HTML', 'SCSS'],
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
       {
-        mediaSrc: 'https://i.pinimg.com/originals/c0/d3/79/c0d37949035f7009335382fecfebd291.jpg',
+        mediaSrc: '395845968',
         class: 'full-width',
+        video: true,
         caption: 'Felicia',
       },
       {
-        mediaSrc: 'risk-pool_02.png',
-        local: true,
+        mediaSrc: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
         caption: 'Felicia',
       },
     ],
@@ -75,12 +74,13 @@ const data = [
     imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
     media: [
       {
-        mediaSrc: 'https://images.theconversation.com/files/290082/original/file-20190829-106530-1rt1h0m.jpg?ixlib=rb-1.1.0&rect=5%2C0%2C3408%2C2318&q=45&auto=format&w=496&fit=clip',
-        caption: 'Q-Bee'
-      },
-      {
         mediaSrc: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
         caption: 'Felicia'
+      },
+      {
+        mediaSrc: 'https://images.theconversation.com/files/290082/original/file-20190829-106530-1rt1h0m.jpg?ixlib=rb-1.1.0&rect=5%2C0%2C3408%2C2318&q=45&auto=format&w=496&fit=clip',
+        caption: 'Q-Bee',
+        class: 'full-width',
       },
     ],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',

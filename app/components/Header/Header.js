@@ -4,11 +4,31 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = { navState: false };
+  }
+
+  handleClick = () => {
+    const { navState } = this.state;
+    console.log("hello", navState);
+    this.setState(() => ({
+      navState: !navState
+    }));
+  };
+
   render() {
     const { match, portfolio, portfolioCurrent } = this.props;
+    const { navState } = this.state;
     if (match.path === '/work' && portfolio.length > 2) {
       return (
-        <div className="header">
+        <div
+          className={navState ? 'header --isActive' : 'header --isInactive'}
+          role="button"
+          tabIndex="0"
+          onClick={this.handleClick}
+          onKeyDown={this.handleClick}
+        >
           <div className="nav-bar">
             <Link className="router-link" to="/">
             HOME
