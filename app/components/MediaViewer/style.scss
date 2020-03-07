@@ -33,8 +33,11 @@
     margin: 2%;
     &.full-width {
       margin: 0px;
+      overflow: hidden;
       iframe {
-        max-height: 90vh; // return-refine
+        height: 115%;
+        margin-top: -10%;
+        max-height: unset; // return-refine
       }
     }
     @include mobile-tablet {
@@ -90,6 +93,11 @@
       @include mobile-tablet {
         display: none;
       }
+    }
+    .img-expander.full-width {
+      color: lightgrey;
+      cursor: default;
+      pointer-events: none;
     }
   }
 }
