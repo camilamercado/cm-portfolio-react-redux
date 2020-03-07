@@ -54,7 +54,7 @@ class MediaViewer extends React.Component {
     const currentMedia = media[newCount].mediaSrc;
     const vimeoSrc = `https://player.vimeo.com/video/${currentMedia}?autoplay=1&loop=1&autopause=0&background=1`;
     const imgSrc = media[newCount].local ? mapFiles(require.context('../../database/media', true, /\.(png|gif|ico|jpg|jpeg)$/), currentMedia) : currentMedia;
-    const mediaElement = media[newCount].video ? <iframe src={vimeoSrc} title="myFrame" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt="" src={imgSrc} />;
+    const mediaElement = media[newCount].video ? <iframe src={vimeoSrc} title={media[newCount].caption} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt={media[newCount].caption} src={imgSrc} />;
     const settingLabel = mediaSetting ? 'Reduce' : 'Expand';
 
     return (
@@ -89,7 +89,7 @@ class MediaViewer extends React.Component {
             {newCount + 1}/{media.length}
           </div>
           <div
-            className="img-expander"
+            className={media[newCount].class ? `img-expander ${media[newCount].class}` : 'img-expander'}
             role="button"
             tabIndex="0"
             onClick={this.handleClickExpander}
