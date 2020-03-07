@@ -9,17 +9,17 @@ const data = [
       {
         mediaSrc: '392824541',
         video: true,
-        caption: 'Felicia',
+        caption: 'Screen Recording of Software Studios Portfolio and Webstore Splashpage, 2020',
       },
       {
         mediaSrc: 'software-studios_04.png',
-        caption: 'Felicia',
+        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
         local: true
       },
       {
         mediaSrc: '392826478',
         video: true,
-        caption: 'Felicia',
+        caption: 'Screen Recording of Software Studios Webstore Product Pages, 2020',
       },
     ],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -36,12 +36,12 @@ const data = [
       {
         mediaSrc: '395819438',
         video: true,
-        caption: 'Original Software Studios Site',
+        caption: 'Screen Recording of Software Studios Website, 2015–2016',
       },
       {
-        mediaSrc: '395817394',
+        mediaSrc: '396186801',
         video: true,
-        caption: 'Updated Software Studios Site',
+        caption: 'Screen Recording Updated Software Studios Website, 2017–2019',
       },
     ],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -54,14 +54,15 @@ const data = [
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
       {
-        mediaSrc: '395845968',
+        mediaSrc: '396191882',
         class: 'full-width',
         video: true,
-        caption: 'Felicia',
+        caption: 'Screen Recording of My Existential Limits To the Rectification of Past Wrongs, by Tiona Nekkia McClodden. Published by Triple Canopy on April 25, 2019.',
       },
       {
-        mediaSrc: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
-        caption: 'Felicia',
+        mediaSrc: '396036203',
+        video: true,
+        caption: 'Screen Recording of The World Is Unknown, by Carolyn Lazard. Published by Triple Canopy on April 19, 2019.',
       },
     ],
     text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
