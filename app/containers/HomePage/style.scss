@@ -1,16 +1,49 @@
 @import '../../styles/global-styles.scss';
 
+@keyframes mask-play {
+  from {
+    -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 5%,  black 20%);
+    mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 5%,  black 20%);
+  }
+  to {
+    -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 25%,  black 50%);
+    mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 25%,  black 50%);
+  }
+}
+
+article {
+  background-color: gray;
+}
+
 .home-page {
-  background-color: gray;;
+  background-color: gray;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 150px 1fr;
-  grid-template-rows: 1fr 300px 1fr $gutter-size;
+  grid-template-columns: .7fr .55fr 150px 1fr;
+  grid-template-rows: $gutter-size 1fr 300px 1fr 5px;
   grid-column-gap: 5px;
+  z-index: 2;
+  transition: all 2s ease;
+  transition: mask-image .3s;
+
+  &.hover-state {
+    // animation: mask-play 1.4s;
+    -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%,  black 50%);
+    mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.719) 25%,  black 50%);
+    // background: transparent;
+    .archway {
+      // background: transparent;
+      // transition: background 2s ease;
+    }
+  }
+  @include mobile-tablet {
+    grid-template-columns: 0px 1fr 0px 1fr;
+    grid-column-gap: 2.5px;
+  }
 
   .archway {
     border-top-left-radius: 100% 60%;
@@ -18,14 +51,14 @@
     background: #231f1a;
     margin-top: 5px;
     background: radial-gradient(#ab9338, transparent);
+    grid-row-start: 2;
+    grid-row-end: 5;
     // background: radial-gradient(indianred, transparent);
     // background: radial-gradient(red, transparent);
 
     &:nth-of-type(1){
       grid-column-start: 1;
       grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 4;
       border-radius: 0;
       // background-image: url('../../images/img-02.png');
       // background-size: auto 100%;
@@ -35,8 +68,6 @@
     &:nth-of-type(2){
       grid-column-start: 2;
       grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 4;
       display: grid;
       z-index: 2;
     }
@@ -44,8 +75,10 @@
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 1;
-      grid-row-end: 4;
       grid-template-rows: 1fr 1fr 1fr;
+      @include mobile-tablet {
+       height: calc(100vh - 30px);
+      }
       border: 0px;
       display: grid;
       justify-content: center;
@@ -57,7 +90,6 @@
       grid-column-start: 4;
       grid-column-end: 5;
       grid-row-start: 1;
-      grid-row-end: 4;
     }
   }
 
@@ -72,24 +104,55 @@
   .faerie-orb {
     grid-row-start: 1;
     grid-row-end: 2;
-    /* grid-column-start: 1; */
     margin: auto;
+    @include mobile-tablet {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      z-index: 5;
+    }
   }
 }
 
-// .header {
-//   border: 5px solid grey;
-//   .nav-bar * {
-//     background: white;
-//     font-family: "Sabon";
-//     color: black!important;
-//     font-size: 10px;
-//     line-height: 20px;
-//   }
-//   &:hover {
-//     * {
-//       // font-family: "Sabon";
-//       color: pink;
-//     }
-//   }
-// }
+.hover-page {
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header {
+  z-index: 5;
+  top: 0px;
+  padding-left: 0px;
+  transition: all .5s ease;
+  // * {
+  //   text-transform: uppercase;
+  // }
+  .nav-bar {
+    grid-template-columns: .7fr .55fr 150px 1fr;
+    // ul {
+    //   margin-left: 200px;
+    //   font-size: 2em;
+    //   line-height: 1.3em;
+    // }
+  }
+  // height:55vh;
+  // background: radial-gradient(farthest-side at 50% 30%, grey, grey, transparent);
+
+  &.--isActive {
+    height:55vh;
+    .nav-bar {
+      // background: radial-gradient(farthest-side at 50% 30%, grey, grey, transparent);
+    }
+  }
+  @include mobile-tablet {
+    height: calc(#{$gutter-size * 2});
+    .nav-bar {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      a {
+        margin-top: 1em;
+      }
+    }
+  }
+}

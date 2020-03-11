@@ -19,7 +19,9 @@ import {
   LOAD_PORTFOLIO,
   LOAD_PORTFOLIO_SUCCESS,
   SET_PORTFOLIO_CURRENT,
+  SET_PORTFOLIO_NEXT,
   UPDATE_MEDIA_SETTING,
+  UPDATE_NAV_SETTING,
 } from './constants';
 
 export function loadPortfolio() {
@@ -40,9 +42,23 @@ export function updatePortfolioCurrent(entry) {
   };
 }
 
+export function updatePortfolioNext(entry) {
+  return {
+    type: SET_PORTFOLIO_NEXT,
+    entry,
+  };
+}
+
 export function updateMediaSetting(setting) {
   return {
     type: UPDATE_MEDIA_SETTING,
+    setting,
+  };
+}
+
+export function updateNavSetting(setting) {
+  return {
+    type: UPDATE_NAV_SETTING,
     setting,
   };
 }

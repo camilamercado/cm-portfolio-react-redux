@@ -9,15 +9,15 @@ import PropTypes from 'prop-types';
 
 class FeaturePage extends Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
-    const { portfolio, updatePortfolioCurrent, match } = this.props;
+    const { portfolio, updatePortfolioCurrent, match, portfolioCurrent } = this.props;
     const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
     updatePortfolioCurrent(currentIndex);
   }
 
   componentDidUpdate() {
-    const { portfolio, updatePortfolioCurrent, match } = this.props;
+    const { portfolio, updatePortfolioCurrent, match, portfolioCurrent } = this.props;
     const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
-    updatePortfolioCurrent(currentIndex);
+    updatePortfolioCurrent(currentIndex, portfolioCurrent, match.params);
   }
 
   render() {

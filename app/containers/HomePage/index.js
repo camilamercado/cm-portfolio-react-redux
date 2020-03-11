@@ -5,9 +5,12 @@ import injectReducer from 'utils/injectReducer';
 import portfolioData from 'database/data';
 
 import {
-  makeSelectPortfolio
+  makeSelectPortfolio,
+  makeSelectNavSetting,
+  makeSelectPortfolioNext,
+  makeSelectPortfolioCurrent
 } from 'containers/App/selectors';
-import { portfolioLoaded } from '../App/actions';
+import { portfolioLoaded, updateNavSetting, updatePortfolioNext } from '../App/actions';
 import reducer from './reducer';
 import HomePage from './HomePage';
 
@@ -15,11 +18,20 @@ const mapDispatchToProps = (dispatch) => ({
   onInit: (evt) => {
     if (evt !== undefined && evt.preventDefault) evt.preventDefault();
     dispatch(portfolioLoaded(portfolioData));
+  },
+  updateNavSetting: (evt) => {
+    dispatch(updateNavSetting(evt));
+  },
+  updatePortfolioNext: (evt) => {
+    dispatch(updatePortfolioNext(evt));
   }
 });
 
 const mapStateToProps = createStructuredSelector({
   portfolio: makeSelectPortfolio(),
+  navSetting: makeSelectNavSetting(),
+  portfolioCurrent: makeSelectPortfolioCurrent(),
+  portfolioNext: makeSelectPortfolioNext(),
 });
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);

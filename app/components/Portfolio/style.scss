@@ -1,23 +1,113 @@
+// TRIAL 1
+
+// @import '../../styles/global-styles.scss';
+// .portfolio-page {
+//   @include mobile-tablet {
+//     // padding: calc(#{$gutter-size} * 2) $gutter-size;
+//   } 
+//   .header {
+//     position: absolute;
+//     top: 0px;
+//     height:calc(#{$gutter-size} /2);
+//     transition: height .5s ease;
+//     // background-color: $theme-nav;
+//     z-index: 10;
+//     font-size: 30px;
+//     line-height: 30px;
+//     outline: 0;
+//     cursor: pointer;
+//     user-select: none;
+//     &:hover {
+//       height: 70vh;
+//     }
+//     @include mobile-tablet {
+//       &.--isActive {
+//         height:100vh;
+//       }
+//       &.--isInactive {
+//         height:$gutter-size;
+//       }
+//     } 
+//     .nav-bar {
+//       height: 70vh;
+//       display: grid;
+//       grid-template-columns: auto 1fr auto;
+//       grid-column-gap: 10px;
+//       justify-items: center;
+//       align-items: start;
+//       background: linear-gradient(#ab9338, grey 35px, transparent 100%);
+//       background: linear-gradient(grey, #ab9338 35px, transparent 100%);
+//       background: linear-gradient(red 50%, transparent 100%);
+//       @include mobile-tablet {
+//         width: 100%;
+//         height: 100vh;
+//       } 
+//       h1, a {
+//         font-size: 1em;
+//         line-height: 1em;
+//       }
+//       a {
+//         &:hover {
+//           color: $theme-link;
+//         }
+//       }
+//       ul {
+//         margin-top: 0px;
+//         @include mobile-tablet {
+//           padding-left: 20px;
+//         }
+//         h1 {
+//           margin-bottom: $gutter-size;
+//         }
+//         li {
+//           margin-bottom: calc(#{$gutter-size} / 3);
+//           text-transform: unset!important;
+
+//           a {
+//             text-decoration: none;
+//             @include Sabon;
+//             text-transform: unset!important;
+//           }
+//           &.active {
+//             a {
+//               text-decoration: underline;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// TRIAL 2
+
 @import '../../styles/global-styles.scss';
 .portfolio-page {
   @include mobile-tablet {
     // padding: calc(#{$gutter-size} * 2) $gutter-size;
-  } 
+  }
+  &.hover-state {
+    .portfolio-spread {
+      -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 35%, black 50%);
+      mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 35%, black 50%);
+    }
+    .portfolio-spread.hover-page {
+      -webkit-mask-image: unset;
+      mask-image: unset;
+    }
+  }
   .header {
     position: absolute;
     top: 0px;
-    height:calc(#{$gutter-size} /2);
-    transition: height .5s ease;
-    background-color: $theme-nav;
+    width: 100%;
+    background-color: red;
+    transition: all .5s ease;
     z-index: 10;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: $gutter-size;
+    line-height: $gutter-size;
     outline: 0;
     cursor: pointer;
     user-select: none;
-    &:hover {
-      height:50vh;
-    }
     @include mobile-tablet {
       &.--isActive {
         height:100vh;
@@ -26,48 +116,161 @@
         height:$gutter-size;
       }
     } 
+    &.--isInactive {
+      height:calc(#{$gutter-size} / 2);
+    }
     .nav-bar {
+      height: auto;
+      padding-bottom: 100px;
+      padding-right: 30%;
       display: grid;
-      grid-template-columns: auto 1fr auto;
-      grid-column-gap: 10px;
+      grid-template-columns: .6fr 1fr;
       justify-items: center;
       align-items: start;
-      @include desktop-narrow {
-        width: 90%;
-      }
-      @include mobile-tablet {
-        width: 100%;
-      } 
-      h1, a {
+      * {
         font-size: 1em;
-        line-height: 1em;
-      }
-      a {
-        &:hover {
-          color: $theme-link;
-        }
+        text-align: center;
       }
       ul {
-        margin-top: 0px;
-        @include mobile-tablet {
-          padding-left: 20px;
-        }
-        h1 {
-          margin-bottom: $gutter-size;
-        }
         li {
-          margin-bottom: calc(#{$gutter-size} / 3);
-          
-          a {
-            text-decoration: none;
+          &.active a {
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: unset;
+              pointer-events: none;
           }
-          &.active {
-            a {
-              text-decoration: underline;
-            }
+        }
+      }
+    }
+    &.--isActive {
+      height:60vh;
+      background: transparent;
+      .nav-bar {
+         background: radial-gradient(farthest-side at 50% 30%, white, white, transparent);
+         * {
+           color: black;
+
+         }
+       }
+    }
+  }
+  &.dark{
+    .header {
+      &.--isActive {
+        .nav-bar {
+          background: radial-gradient(farthest-side at 50% 30%, black, black, transparent);
+          * {
+            color: white;
           }
         }
       }
     }
   }
+  .portfolio-spread {
+    position: fixed;
+    z-index: 2;
+  }
+  .hover-page {
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    // -webkit-mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+    // -moz-mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+    // -o-mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+    // mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+  }
 }
+
+// TRIAL 3
+
+// @import '../../styles/global-styles.scss';
+// .portfolio-page {
+//   @include mobile-tablet {
+//     // padding: calc(#{$gutter-size} * 2) $gutter-size;
+//   } 
+//   .header {
+//     position: absolute;
+//     top: 0px;
+//     height:calc(#{$gutter-size} /2);
+//     // height: 100vh;
+//     transition: height .5s ease;
+//     background-color: $theme-nav;
+//     background: linear-gradient(red 50%, transparent 100%);
+//     z-index: 10;
+//     font-size: 30px;
+//     line-height: 30px;
+//     outline: 0;
+//     cursor: pointer;
+//     user-select: none;
+//     &:hover {
+//       height: 70vh;
+//     }
+//     @include mobile-tablet {
+//       &.--isActive {
+//         height:100vh;
+//       }
+//       &.--isInactive {
+//         height:$gutter-size;
+//       }
+//     } 
+//     .nav-bar {
+//       height: 70vh;
+//       display: grid;
+//       grid-template-columns: auto 1fr auto;
+//       grid-column-gap: 10px;
+//       justify-items: center;
+//       align-items: start;
+//       // background: linear-gradient(#ab9338, grey 35px, transparent 100%);
+//       // background: linear-gradient(grey, #ab9338 35px, transparent 100%);
+//       // background: linear-gradient(red 50%, transparent 100%);
+//       @include mobile-tablet {
+//         width: 100%;
+//         height: 100vh;
+//       } 
+//       h1, a {
+//         font-size: 1em;
+//         line-height: 1em;
+//       }
+//       a {
+//         &:hover {
+//           color: $theme-link;
+//         }
+//       }
+//       ul {
+//         margin-top: 0px;
+//         @include mobile-tablet {
+//           padding-left: 20px;
+//         }
+//         h1 {
+//           margin-bottom: $gutter-size;
+//         }
+//         li {
+//           margin-bottom: calc(#{$gutter-size} / 3);
+//           text-transform: unset!important;
+
+//           a {
+//             text-decoration: none;
+//             @include Sabon;
+//             text-transform: unset!important;
+//           }
+//           &.active {
+//             a {
+//               text-decoration: underline;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .hover-page {
+//     position: fixed;
+//     height: 100vh;
+//     overflow: hidden;
+//     z-index: 5;
+//     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+//     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+//     -webkit-mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+//     mask-image: linear-gradient(45deg, black 25%,  rgba(255, 255, 255, 0) 50%);
+//   }
+// }

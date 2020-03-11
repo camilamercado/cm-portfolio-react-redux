@@ -20,34 +20,14 @@
       font-family: $font-sans;
       color: $theme-base;
       font-weight: normal;
+      // text-transform: uppercase;
     }
-    a, h1, span {
-      font-size:  $gutter-size;
-      line-height:  $gutter-size;
+    a, h1 {
+      font-size: 2em;
+      line-height: 1em;
     }
     h1 {
       margin: 0;
-      text-transform: uppercase;
-    }
-    a h1, a {
-      text-decoration: none;
-      &:hover {
-        color: white;
-        background: radial-gradient(blue, red, yellow);
-        background-repeat: no-repeat ;
-      }
-    }
-    ul {
-      margin: 0px;
-      list-style: none;
-      li {
-        margin-top: 0.5em;
-        a { 
-          text-decoration: none; 
-          text-transform: unset!important;
-        }
-      }
     }
   }
 }
-

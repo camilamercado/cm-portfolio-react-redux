@@ -54,7 +54,7 @@ class MediaViewer extends React.Component {
     const currentMedia = media[newCount].mediaSrc;
     const vimeoSrc = `https://player.vimeo.com/video/${currentMedia}?autoplay=1&loop=1&autopause=0&background=1`;
     const imgSrc = media[newCount].local ? mapFiles(require.context('../../database/media', true, /\.(png|gif|ico|jpg|jpeg)$/), currentMedia) : currentMedia;
-    const mediaElement = media[newCount].video ? <iframe src={vimeoSrc} title={media[newCount].caption} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt={media[newCount].caption} src={imgSrc} />;
+    const mediaElement = media[newCount].video ? <iframe src={vimeoSrc} title={media[newCount].caption} poster="https://i.vimeocdn.com/filter/overlay" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt={media[newCount].caption} src={imgSrc} />;
     const settingLabel = mediaSetting ? 'Reduce' : 'Expand';
 
     return (

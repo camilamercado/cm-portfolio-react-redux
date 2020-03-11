@@ -2,13 +2,20 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import portfolioData from 'database/data';
-
 import {
   makeSelectPortfolio,
   makeSelectPortfolioCurrent,
-  makeSelectMediaSetting
+  makeSelectPortfolioNext,
+  makeSelectMediaSetting,
+  makeSelectNavSetting
 } from 'containers/App/selectors';
-import { portfolioLoaded, updatePortfolioCurrent, updateMediaSetting } from '../../containers/App/actions';
+import {
+  portfolioLoaded,
+  updatePortfolioCurrent,
+  updatePortfolioNext,
+  updateMediaSetting,
+  updateNavSetting
+} from '../../containers/App/actions';
 import Portfolio from './Portfolio';
 
 const mapDispatchToProps = (dispatch) => ({
@@ -20,15 +27,23 @@ const mapDispatchToProps = (dispatch) => ({
   updatePortfolioCurrent: (evt) => {
     dispatch(updatePortfolioCurrent(portfolioData[evt]));
   },
+  updatePortfolioNext: (evt) => {
+    dispatch(updatePortfolioNext(evt));
+  },
   updateMediaSetting: (evt) => {
     dispatch(updateMediaSetting(evt));
+  },
+  updateNavSetting: (evt) => {
+    dispatch(updateNavSetting(evt));
   }
 });
 
 const mapStateToProps = createStructuredSelector({
   portfolio: makeSelectPortfolio(),
   portfolioCurrent: makeSelectPortfolioCurrent(),
-  mediaSetting: makeSelectMediaSetting()
+  portfolioNext: makeSelectPortfolioNext(),
+  mediaSetting: makeSelectMediaSetting(),
+  navSetting: makeSelectNavSetting(),
 });
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);

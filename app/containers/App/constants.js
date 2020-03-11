@@ -13,5 +13,7 @@ export const DEFAULT_LOCALE = 'en';
 
 export const LOAD_PORTFOLIO = 'boilerplate/App/LOAD_PORTFOLIO';
 export const LOAD_PORTFOLIO_SUCCESS = 'boilerplate/App/LOAD_PORTFOLIO_SUCCESS';
-export const UPDATE_MEDIA_SETTING = 'boilerplate/App/UPDATE_MEDIA_SETTING';
 export const SET_PORTFOLIO_CURRENT = 'boilerplate/App/SET_PORTFOLIO_CURRENT';
+export const SET_PORTFOLIO_NEXT = 'boilerplate/App/SET_PORTFOLIO_NEXT';
+export const UPDATE_MEDIA_SETTING = 'boilerplate/App/UPDATE_MEDIA_SETTING';
+export const UPDATE_NAV_SETTING = 'boilerplate/App/UPDATE_NAV_SETTING';
