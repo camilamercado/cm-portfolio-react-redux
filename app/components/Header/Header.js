@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './style.scss';
+import Marble from '../../images/marble-blue.png';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -20,7 +21,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     this.setState(() => ({
       navState: !navState
     }));
-    updateNavSetting(!navSetting);
+    // updateNavSetting(!navSetting);
   };
 
   handleItemLeave= () => {
@@ -29,23 +30,21 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   }
 
   handleNavHover= () => {
-    const { match, updateNavSetting } = this.props;
-    this.setState(() => ({
-      navState: true
-    }));
-    // if (match.path === '/') {
-    //   updateNavSetting(true);
-    // }
+    const { match } = this.props;
+    if (match.path !== '/') {
+      this.setState(() => ({
+        navState: true
+      }));
+    }
   }
 
   handleNavLeave= () => {
-    const { match, updateNavSetting } = this.props;
-    this.setState(() => ({
-      navState: false
-    }));
-    // if (match.path === '/') {
-    //   updateNavSetting(false);
-    // }
+    const { match } = this.props;
+    if (match.path !== '/') {
+      this.setState(() => ({
+        navState: false
+      }));
+    }
   }
 
   handleItemHover(item) {
@@ -53,7 +52,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     if (match.path === '/') {
       updatePortfolioNext(item);
       updateNavSetting(true);
-    } else if (match.path === '/work' && portfolioCurrent.id !== item.id) {
+    } else if (match.path === '/projects' && portfolioCurrent.id !== item.id) {
       updatePortfolioNext(item);
       updateNavSetting(true);
     }
@@ -75,14 +74,15 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         >
           <div className="nav-bar">
             <div className="nav-container">
-              {match.path === '/' ? <h1>Camila Mercado</h1> : <Link className="router-link" to="/"> <h1>Home</h1> </Link>}
+              {match.path === '/' ? <span>CM</span> : <Link className="router-link" to="/"> <h1>Home</h1> </Link>}
               <span>❦</span>
             </div>
             <div className="nav-container">
+              <img className="marble" alt="beautiful, round" height="100px" width="100px" src={Marble} />
               <ul>
                 <h1>Projects</h1>
                 <span>❦</span>
-                {portfolio.map((item) => <li className={item.id === portfolioCurrent.id ? 'active' : null} key={item.id} onMouseEnter={this.handleItemHover.bind(this, item)} onMouseLeave={this.handleItemLeave}><Link to={`/work/${item.id}`}>{item.projectTitle}</Link></li>)}
+                {portfolio.map((item) => <li className={item.id === portfolioCurrent.id ? 'active' : null} key={item.id} onMouseEnter={this.handleItemHover.bind(this, item)} onMouseLeave={this.handleItemLeave}><Link to={`/projects/${item.id}`}>{item.projectTitle}</Link></li>)}
               </ul>
             </div>
           </div>
@@ -104,8 +104,8 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <div
             className="nav-container"
           >
-            <Link className="router-link" to="/work/software-studios">
-              Work
+            <Link className="router-link" to="/projects/software-studios">
+              Projects
             </Link>
           </div>
         </div>

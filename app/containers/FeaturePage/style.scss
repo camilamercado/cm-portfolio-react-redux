@@ -15,6 +15,7 @@
   grid-row-start: 1;
   grid-row-end: 4;
   display: grid;
+  width: 100%;
   padding: $gutter-size;
   background: $theme-base-secondary;
   grid-template-columns: 1fr 1fr;

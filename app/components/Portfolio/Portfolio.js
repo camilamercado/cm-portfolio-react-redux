@@ -22,14 +22,11 @@ class Portfolio extends Component { // eslint-disable-line react/prefer-stateles
       'portfolio-page': true,
       'hover-state': navSetting
     });
-    console.log(classValue);
     return (
       <div className={portfolioCurrent.theme ? `${classValue} ${portfolioCurrent.theme}` : classValue}>
         <Header {...this.props} />
         <Route path={`${match.path}/:portfolioId`} render={(matchProps) => <FeaturePage {...this.props} {...matchProps} />} />
         { navSetting ? <HoverPage {...this.props} /> : null }
-        <HoverPage {...this.props} />
-
       </div>
     );
   }

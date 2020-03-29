@@ -76,27 +76,27 @@ class MediaViewer extends React.Component {
           {mediaElement}
         </figure>
         <div className="img-ui">
-          <div
+          <button
+            type="button"
             className="img-clickthrough"
-            role="button"
             tabIndex="0"
             onClick={this.handleClickCounter}
             onKeyDown={this.handleClickCounter}
           >
             Click or Key
-          </div>
+          </button>
           <div className="img-counter">
             {newCount + 1}/{media.length}
           </div>
-          <div
+          <button
+            type="button"
             className={media[newCount].class ? `img-expander ${media[newCount].class}` : 'img-expander'}
-            role="button"
             tabIndex="0"
             onClick={this.handleClickExpander}
             onKeyDown={this.handleClickExpander}
           >
             {settingLabel} Media
-          </div>
+          </button>
         </div>
       </section>
     );

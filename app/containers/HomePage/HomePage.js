@@ -29,7 +29,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         </Helmet>
         <div className={navSetting ? 'home-page hover-state' : 'home-page'}>
           <div className="archway">
-            <div className="sticker"></div>
           </div>
           <div className="archway">
           </div>
@@ -48,4 +47,5 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
 HomePage.propTypes = {
   onInit: PropTypes.func,
+  navSetting: PropTypes.bool
 };

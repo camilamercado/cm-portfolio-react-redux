@@ -89,6 +89,9 @@
       outline: 0;
       cursor: pointer;
       user-select: none;
+      background: none;
+      border: none;
+      font-size: 1em;
       &:hover { color: $theme-link;}
       @include mobile-tablet {
         display: none;

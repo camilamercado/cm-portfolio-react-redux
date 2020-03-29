@@ -51,3 +51,12 @@
   }
 }
 
+img.marble {
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity ease;
+  pointer-events: none;
+  .--isActive & {
+    opacity: 1;
+  }
+}

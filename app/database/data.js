@@ -2,9 +2,9 @@ const data = [
   {
     projectTitle: 'Software Studios',
     id: 'software-studios',
-    link: 'www.software-studios.com',
+    link: 'https://software-studios.com/',
     tags: ['Shopify', 'SCSS'],
-    imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
+    imageUrl: 'software-studios_00.png',
     media: [
       {
         mediaSrc: '392824541',
@@ -44,12 +44,12 @@ const data = [
         caption: 'Screen Recording Updated Software Studios Website, 2017–2019',
       },
     ],
-    text: ''
+    text: 'testing the (test)[test] link.'
   },
   {
     projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
-    link: 'www.canopycanopycanopy.com',
+    link: 'https://www.canopycanopycanopy.com/issues/24/contents/accessible-by-default',
     tags: ['HTML', 'SCSS'],
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
@@ -65,7 +65,7 @@ const data = [
         caption: 'Screen Recording of The World Is Unknown, by Carolyn Lazard. Published by Triple Canopy on April 19, 2019.',
       },
     ],
-    text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
+    text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an HTML & CSS template to apply interactivity to a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.'
   },
   {
     projectTitle: 'Resentment',

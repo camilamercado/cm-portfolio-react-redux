@@ -17,7 +17,7 @@ class App extends Component { // eslint-disable-line react/prefer-stateless-func
           <div className="app-wrapper">
             <Switch>
               <Route exact path="/" render={(matchProps) => <HomePage {...this.props} {...matchProps} />} />
-              <Route path="/work" render={(matchProps) => <Portfolio {...this.props} {...matchProps} />} />
+              <Route path="/projects" render={(matchProps) => <Portfolio {...this.props} {...matchProps} />} />
               <Route path="" component={NotFoundPage} />
             </Switch>
           </div>

@@ -29,7 +29,6 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
     const nextEntry = portfolioCount === portfolio.length - 1 ? portfolio[0] : portfolio[portfolioCount + 1];
     const lastEntry = portfolioCount <= 0 ? portfolio[portfolio.length - 1] : portfolio[portfolioCount - 1];
     const settingLabel = mediaSetting ? 'Reduce' : 'Expand';
-
     if (portfolio.length < 3) {
       return (
         <section className="page-loader portfolio-spread">
