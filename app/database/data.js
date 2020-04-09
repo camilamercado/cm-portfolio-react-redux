@@ -68,6 +68,26 @@ const data = [
     text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an HTML & CSS template to apply interactivity to a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.'
   },
   {
+    projectTitle: 'Nightmare Wallpaper',
+    id: 'nightmare-wallpaper',
+    link: 'www.canopycanopycanopy.com',
+    tags: ['HTML', 'SCSS'],
+    imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
+    media: [
+      {
+        mediaSrc: '405571259',
+        video: true,
+        caption: 'Screen Recording of English Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
+      },
+      {
+        mediaSrc: '405571379',
+        video: true,
+        caption: 'Screen Recording of Chinese Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
+      },
+    ],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
     projectTitle: 'Resentment',
     id: 'resentment',
     link: 'www.canopycanopycanopy.com',

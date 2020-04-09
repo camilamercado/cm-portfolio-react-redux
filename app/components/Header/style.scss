@@ -18,6 +18,7 @@
     align-items: start;
     * {
       font-family: $font-sans;
+      -webkit-font-smoothing: antialiased;
       color: $theme-base;
       font-weight: normal;
     }
