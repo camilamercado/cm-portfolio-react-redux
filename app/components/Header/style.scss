@@ -50,6 +50,35 @@
       }
     }
   }
+  @include mobile-tablet {
+    &.--isActive {
+      height:100vh!important;
+      position: fixed;
+      .nav-bar {
+        height:100%;
+        background: rgba(255, 0, 0, 0.7);
+      }
+    }
+    .nav-bar {
+      grid-template-columns: 100px 1fr!important;
+      padding: 5px 5px;
+      .nav-container {
+        width: 100%;
+        &:nth-child(1) *{
+          text-align: left;
+        }
+        &:nth-child(2) *{
+          text-align: right;
+        }
+        ul li {
+          // margin-top: 1em;
+        }
+      }
+      * {
+        text-align: unset;
+      }
+    }
+  }
 }
 
 img.marble {
