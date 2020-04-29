@@ -215,6 +215,20 @@
     filter: invert(1);
   }
   .left  {
-    // background: $theme-alt;
+    border: 0px;
+  }
+}
+
+.blue {
+  background: blue;
+  * { color: $theme-base; }
+  .portfolio-spread {
+    .left {
+      border: 0px;
+    }
+    .text-buffer {
+      filter: invert(0);
+      background: linear-gradient(0deg, blue 20%,rgba(255,255,255,0) 100%);
+    }
   }
 }

@@ -26,7 +26,7 @@
       height:calc(#{$gutter-size} / 2);
     }
     .nav-bar {
-      height: auto;
+      height: 100%;
       padding-bottom: 100px;
       padding-right: 30%;
       display: grid;
@@ -152,7 +152,8 @@
       }
     } 
   }
-  &.dark{
+  &.dark,
+  &.blue{
     .header {
       &.--isActive {
         .nav-bar {
@@ -169,6 +170,12 @@
         }
       }
     }
+  }
+  &.black .header.--isActive .nav-bar{ 
+    background: radial-gradient(farthest-side at 50% 30%, black, black, transparent);
+  }
+  &.blue .header.--isActive.--isActive .nav-bar {
+    background: radial-gradient(farthest-side at 50% 30%, blue, blue transparent);
   }
   .portfolio-spread {
     position: fixed;
