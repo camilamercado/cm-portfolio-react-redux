@@ -2,8 +2,8 @@
 .portfolio-page {
   &.hover-state {
     .portfolio-spread {
-      -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 35%, black 50%);
-      mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 35%, black 50%);
+      -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 25%, black 44%);
+      mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 25%, black 44%);
     }
     .portfolio-spread.hover-page {
       -webkit-mask-image: unset;
@@ -77,10 +77,13 @@
       }
     }
     &.--isActive {
-      height:55vh;
+      height:65vh;
       background: transparent;
       .nav-bar {
-         background: radial-gradient(farthest-side at 50% 30%, white, white, transparent);
+        background: radial-gradient(white 40%, transparent 65%);
+        background-size: 60%;
+        background-position: 45% -50px;
+        background-repeat: no-repeat;
          * {
            color: black;
            @include Sabon;
@@ -91,7 +94,7 @@
          li:hover {
           * {
             color: white;
-            font-size: 23m;
+            // font-size: 23m;
           }
          }
          li.active  {
@@ -128,14 +131,6 @@
             }
             ul {
               padding-left: 0px;
-              span {
-              }
-              h1 {
-              }
-              li {
-                &.active a {
-                }
-              }
             }
             img {
               display: none;
@@ -157,7 +152,6 @@
     .header {
       &.--isActive {
         .nav-bar {
-          background: radial-gradient(farthest-side at 50% 30%, black, black, transparent);
           * {
             color: white;
           }
@@ -171,11 +165,17 @@
       }
     }
   }
-  &.black .header.--isActive .nav-bar{ 
-    background: radial-gradient(farthest-side at 50% 30%, black, black, transparent);
+  &.dark .header.--isActive .nav-bar{ 
+    background: radial-gradient(black 40%, transparent 65%);
+    background-size: 60%;
+    background-position: 45% -50px;
+    background-repeat: no-repeat;
   }
-  &.blue .header.--isActive.--isActive .nav-bar {
-    background: radial-gradient(farthest-side at 50% 30%, blue, blue transparent);
+  &.blue .header.--isActive .nav-bar {
+    background: radial-gradient(blue 40%, transparent 65%);
+    background-size: 60%;
+    background-position: 45% -50px;
+    background-repeat: no-repeat;
   }
   .portfolio-spread {
     position: fixed;

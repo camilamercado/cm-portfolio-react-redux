@@ -47,6 +47,28 @@ const data = [
     text: 'testing the (test)[test] link.'
   },
   {
+    projectTitle: 'Kiwi Phong Nguyen Jewelry',
+    theme: 'blue',
+    id: 'kiwi-phong-nguyen-jewelry',
+    link: 'www.canopycanopycanopy.com',
+    tags: ['HTML', 'SCSS'],
+    imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
+    media: [
+      {
+        mediaSrc: 'kiwi-phong-nguyen-jewelry_02.png',
+        caption: 'Q-Bee',
+        class: 'full-width',
+        local: true
+      },
+      {
+        mediaSrc: 'kiwi-phong-nguyen-jewelry_01.png',
+        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
+        local: true
+      }
+    ],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
     projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
     link: 'https://www.canopycanopycanopy.com/issues/24/contents/accessible-by-default',
@@ -138,28 +160,6 @@ const data = [
       },
     ],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    projectTitle: 'Kiwi Phong Nguyen Jewelry',
-    theme: 'blue',
-    id: 'kiwi-phong-nguyen-jewelry',
-    link: 'www.canopycanopycanopy.com',
-    tags: ['HTML', 'SCSS'],
-    imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
-    media: [
-      {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_mask-green.png',
-        caption: 'Q-Bee',
-        class: 'full-width',
-        local: true
-      },
-      {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_01.png',
-        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
-        local: true
-      }
-    ],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
 
