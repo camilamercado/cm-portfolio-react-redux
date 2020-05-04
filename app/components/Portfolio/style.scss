@@ -1,9 +1,9 @@
 @import '../../styles/global-styles.scss';
 
 @mixin background-blob($color: white) {
-  background: radial-gradient($color 55%, transparent 70%);
-  background-size: 50% 100%;
-  background-position: 50% -100px;
+  background: radial-gradient($color 50%, transparent 70%);
+  background-size: 40% 100%;
+  background-position: 45% -100px;
   background-repeat: no-repeat;
 }
 
