@@ -3,7 +3,7 @@ const data = [
     projectTitle: 'Software Studios',
     id: 'software-studios',
     link: 'https://software-studios.com/',
-    tags: ['Shopify', 'SCSS'],
+    tags: ['Shopify', 'Liquid', 'SCSS', 'Javascript'],
     imageUrl: 'software-studios_00.png',
     media: [
       {
@@ -22,7 +22,7 @@ const data = [
         caption: 'Screen Recording of Software Studios Webstore Product Pages, 2020',
       },
     ],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    text: 'Custom webstore & portfolio for Software Studios, LLC',
   },
   {
     projectTitle: 'Software Studios Legacy-Sites',
@@ -44,34 +44,13 @@ const data = [
         caption: 'Screen Recording Updated Software Studios Website, 2017–2019',
       },
     ],
-    text: 'testing the (test)[test] link.'
-  },
-  {
-    projectTitle: 'Kiwi Phong Nguyen Jewelry',
-    theme: 'blue',
-    id: 'kiwi-phong-nguyen-jewelry',
-    link: 'www.canopycanopycanopy.com',
-    tags: ['HTML', 'SCSS'],
-    imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
-    media: [
-      {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_02.png',
-        caption: 'Q-Bee',
-        class: 'full-width',
-        local: true
-      },
-      {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_01.png',
-        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
-        local: true
-      }
-    ],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    text: ''
   },
   {
     projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
     link: 'https://www.canopycanopycanopy.com/issues/24/contents/accessible-by-default',
+    linkTitle: 'https://www.canopycanopycanopy.com/accessible-by-default',
     tags: ['HTML', 'SCSS'],
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
@@ -87,46 +66,28 @@ const data = [
         caption: 'Screen Recording of The World Is Unknown, by Carolyn Lazard. Published by Triple Canopy on April 19, 2019.',
       },
     ],
-    text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an HTML & CSS template to apply interactivity to a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.'
+    text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an interactive web treatment for a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.\n\n Media sourced from projects: “My Existential Limits To the Rectification of Past Wrongs…” by Tiona Nekkia McClodden, published by Triple Canopy on April 25, 2019 and “The World Is Unknown” by Carolyn Lazard, published by Triple Canopy on April 19, 2019.'
   },
   {
     projectTitle: 'Nightmare Wallpaper',
     id: 'nightmare-wallpaper',
-    link: 'www.canopycanopycanopy.com',
-    tags: ['HTML', 'SCSS'],
+    link: 'https://www.canopycanopycanopy.com/issues/24/contents/nightmare-wallpaper',
+    linkTitle: 'https://www.canopycanopycanopy.com/nightmare-wallpaper',
+    tags: ['HTML', 'Javascript', 'SCSS'],
     imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
     media: [
       {
-        mediaSrc: '405571259',
+        mediaSrc: '414924922',
         video: true,
         caption: 'Screen Recording of English Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
       },
       {
-        mediaSrc: '405571379',
+        mediaSrc: '414926011',
         video: true,
         caption: 'Screen Recording of Chinese Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
       },
     ],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  },
-  {
-    projectTitle: 'Resentment',
-    id: 'resentment',
-    link: 'www.canopycanopycanopy.com',
-    tags: ['HTML', 'SCSS'],
-    imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
-    media: [
-      {
-        mediaSrc: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
-        caption: 'Felicia'
-      },
-      {
-        mediaSrc: 'https://images.theconversation.com/files/290082/original/file-20190829-106530-1rt1h0m.jpg?ixlib=rb-1.1.0&rect=5%2C0%2C3408%2C2318&q=45&auto=format&w=496&fit=clip',
-        caption: 'Q-Bee',
-        class: 'full-width',
-      },
-    ],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    text: '“Nightmare Wallpaper,” is a multimedia essay by Pak Sheung Chuen, designed by Cary Potter with Caleb Waldorf, and produced by Triple Canopy. The project was built in both English and Chinese and allows readers to navigate a selection of journal entries, photographs and original artworks collected and produced by the artist to overcome the depression and sense of disempowerment that he and so many others experienced in the wake of Hong Kong’s 2014 Umbrella Movement. \n\n “Nightmare Wallpaper” is an adaptation of an artwork that was first presented by the author in 2017 at an exhibition at Para Site in Hong Kong curated by Freya Chou.',
   },
   {
     projectTitle: 'I Ching Dial',
