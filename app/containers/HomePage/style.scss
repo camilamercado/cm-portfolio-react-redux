@@ -113,8 +113,8 @@ article {
       grid-column-end: 2!important;
       border-top-left-radius: 100% 60%!important;
       border-top-right-radius: 100% 60%!important;
-      margin: 0px!important;
-      // position: absolute;
+      margin: 5px!important;
+      height: 100vh;
     }
   }
   @include mobile-tablet {
@@ -206,6 +206,11 @@ article {
               margin-left: 0.5em;
               margin-left: 8px;
               font-size: 1.75em;
+            }
+            @include mobile-tablet {
+              &:after {
+                display: none;
+              }
             }
           }
         }

@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { isMobile } from 'react-device-detect';
 import './style.scss';
 import Marble from '../../images/marble-blue.png';
 
@@ -16,12 +18,10 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   }
 
   handleClick = () => {
-    const { updateNavSetting, navSetting } = this.props;
     const { navState } = this.state;
     this.setState(() => ({
       navState: !navState
     }));
-    // updateNavSetting(!navSetting);
   };
 
   handleItemLeave= () => {
@@ -49,6 +49,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
   handleItemHover(item) {
     const { match, portfolioCurrent, updatePortfolioNext, updateNavSetting } = this.props;
+    console.log("hover")
     if (match.path === '/') {
       updatePortfolioNext(item);
       updateNavSetting(true);
@@ -82,7 +83,17 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
               <ul>
                 <h1>Projects</h1>
                 <span>❦</span>
-                {portfolio.map((item) => <li className={item.id === portfolioCurrent.id ? 'active' : null} key={item.id} onMouseEnter={this.handleItemHover.bind(this, item)} onMouseLeave={this.handleItemLeave}><Link to={`/projects/${item.id}`}>{item.projectTitle}</Link></li>)}
+                {portfolio.map((item) =>
+                  // eslint-disable-next-line implicit-arrow-linebreak
+                  <li
+                    className={item.id === portfolioCurrent.id ? 'active' : null}
+                    key={item.id}
+                    onMouseEnter={isMobile ? this.handleItemHover.bind(this, item) : null}
+                    onMouseLeave={isMobile ? this.handleItemLeave : null}
+                  >
+                    <Link to={`/projects/${item.id}`}>{item.projectTitle}</Link>
+                  </li>)
+                }
               </ul>
             </div>
           </div>
@@ -99,14 +110,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
       >
         <div className="nav-bar">
           <div className="nav-container">
-            <h1>Camila Mercado</h1>
-          </div>
-          <div
-            className="nav-container"
-          >
-            <Link className="router-link" to="/projects/software-studios">
-              Projects
-            </Link>
+            <h1>CM ❦</h1>
           </div>
         </div>
       </div>
