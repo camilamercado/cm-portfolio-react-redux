@@ -98,6 +98,10 @@ article {
       justify-content: center;
       align-content: center;
       justify-items: center;
+      @include mobile-tablet {
+        display: unset;
+        z-index: 5;
+      }
     }
     &:nth-of-type(4){
       grid-column-start: 4;
@@ -110,6 +114,7 @@ article {
       border-top-left-radius: 100% 60%!important;
       border-top-right-radius: 100% 60%!important;
       margin: 0px!important;
+      // position: absolute;
     }
   }
   @include mobile-tablet {
@@ -125,6 +130,9 @@ article {
     grid-row-start: 1;
     grid-row-end: 2;
     margin: auto;
+    @include mobile-tablet {
+      padding-top: calc(100vh - (100vh - 120px));
+    }
   }
 }
 
