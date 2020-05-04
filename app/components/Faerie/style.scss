@@ -1,69 +1,5 @@
 @import '../../styles/global-styles.scss';
 
-.faerie-orb {
-  @include mobile-tablet {
-    // -webkit-box-shadow: 0px -2px 48px -1px #cfffe4;
-    // -moz-box-shadow: 0px -2px 48px -1px #cfffe4;
-    // box-shadow: 0px -2px 48px -1px #cfffe4;
-    width: 80vw;
-    height: calc(100vh - 120px);
-    padding-left: 30px;
-    padding-right: 30px;
-    // animation-name: glowBox;
-    // animation-duration: 10s;
-    // animation-iteration-count: infinite;
-    // animation-direction: alternate;
-    grid-row-start: 2!important;
-  }
-}
-
-* {
-  color: white;;
-}
-img.em {
-    position: absolute;
-    width: 150px;
-    border-radius: 50%;
-    padding: 20px;
-    @include mobile-tablet {
-      position: unset;
-      object-fit: contain;
-      width: 100%;      
-      height: 100%;
-      margin-left: -2px;
-    }
-}
-
-img.em#t {
-  z-index: 2;
-}
-
-img.em#f {
-  z-index: 3;
-  // box-shadow: none;
-  @include mobile-tablet {
-    display: none;
-  }
-}
-img.em#bb {
-  @include mobile-tablet {
-    display: none;
-  }
-}
-
-img.em {
-  animation-name: glow;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  //filter: invert(.5);
-  border-radius: 0px;
-  &#t {
-    animation-name: glowSecondary;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-  }
-}
-
 @keyframes glow {
   0% {
     filter: invert(0.5);
@@ -82,32 +18,63 @@ img.em {
   }
 }
 
-@keyframes glowSecondary {
-  0% {
-    filter: invert(0.5);
-  }
-  25% {
-    filter: invert(1);
-  }
-  50% {
-    filter: invert(0.5);
-  }
-  75% {
-    filter: invert(0);
-  }
-  100% {
-    filter: invert(0.5);
-  }
-}
-
 @keyframes glowBox {
   from {
-    box-shadow: 0px -2px 48px -1px yellow;
     border-radius: 0px;
   }
   to {
-    box-shadow: 0px -2px 48px -1px white;
     border-radius: 50%;
 
+  }
+}
+
+* {
+  color: white;
+}
+
+img.em {
+    position: absolute;
+    width: 150px;
+    border-radius: 50%;
+    padding: 20px;
+    @include mobile-tablet {
+      width: 240px;
+      height: 400px;
+      padding: 40px;
+    }
+}
+
+img.em#t {
+  z-index: 2;
+}
+
+img.em#f {
+  z-index: 3;
+}
+img.em#bb {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+img.em {
+  animation-name: glow;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  border-radius: 0px;
+  @include mobile-tablet {
+    animation-name: glowBox;
+    -webkit-box-shadow: inset 0px -2px 48px -1px rgb(134, 134, 90);
+    -moz-box-shadow: inset 0px -2px 48px -1px rgb(134, 134, 90);
+    box-shadow: inset 0px -2px 48px -1px rgb(134, 134, 90);
+  }
+  &#t {
+    @include mobile-tablet {
+      animation-name: glowBox;
+      -webkit-box-shadow: 0px -2px 48px -1px rgb(134, 134, 90);
+      -moz-box-shadow: 0px -2px 48px -1px rgb(134, 134, 90);
+      box-shadow: 0px -2px 48px -1px rgb(134, 134, 90);
+    }
   }
 }

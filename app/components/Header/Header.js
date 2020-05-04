@@ -49,7 +49,6 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
   handleItemHover(item) {
     const { match, portfolioCurrent, updatePortfolioNext, updateNavSetting } = this.props;
-    console.log("hover")
     if (match.path === '/') {
       updatePortfolioNext(item);
       updateNavSetting(true);
@@ -88,8 +87,8 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <li
                     className={item.id === portfolioCurrent.id ? 'active' : null}
                     key={item.id}
-                    onMouseEnter={isMobile ? this.handleItemHover.bind(this, item) : null}
-                    onMouseLeave={isMobile ? this.handleItemLeave : null}
+                    onMouseEnter={!isMobile ? this.handleItemHover.bind(this, item) : null}
+                    onMouseLeave={!isMobile ? this.handleItemLeave : null}
                   >
                     <Link to={`/projects/${item.id}`}>{item.projectTitle}</Link>
                   </li>)
