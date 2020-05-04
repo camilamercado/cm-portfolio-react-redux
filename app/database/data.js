@@ -28,7 +28,7 @@ const data = [
     projectTitle: 'Software Studios Legacy-Sites',
     id: 'software-studios-legacy',
     theme: 'dark',
-    link: 'https://web.archive.org/web/20160308193522/http://software-studios.com/',
+    link: 'https://web.archive.org/web/20161007032550/http://software-studios.com/',
     linkTitle: 'web.archive.org/software-studios.com',
     tags: ['HTML', 'Javascript', 'CSS'],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
