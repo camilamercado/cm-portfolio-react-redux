@@ -1,4 +1,12 @@
 @import '../../styles/global-styles.scss';
+
+@mixin background-blob($color: white) {
+  background: radial-gradient($color 55%, transparent 70%);
+  background-size: 50% 100%;
+  background-position: 50% -100px;
+  background-repeat: no-repeat;
+}
+
 .portfolio-page {
   &.hover-state {
     .portfolio-spread {
@@ -77,13 +85,10 @@
       }
     }
     &.--isActive {
-      height:65vh;
+      height:75vh;
       background: transparent;
       .nav-bar {
-        background: radial-gradient(white 40%, transparent 65%);
-        background-size: 60%;
-        background-position: 45% -50px;
-        background-repeat: no-repeat;
+        @include background-blob;
          * {
            color: black;
            @include Sabon;
@@ -91,10 +96,17 @@
          .nav-container:nth-of-type(1){
           * {color: black;}
          }
-         li:hover {
-          * {
-            color: white;
-            // font-size: 23m;
+         li {
+          line-height: 1em;
+          &:hover {
+            a {
+              color: white!important;
+              background: radial-gradient(blue, red, yellow);
+              background-repeat: no-repeat;
+            }
+            &:after {
+              display: none;
+            }
           }
          }
          li.active  {
@@ -166,16 +178,10 @@
     }
   }
   &.dark .header.--isActive .nav-bar{ 
-    background: radial-gradient(black 40%, transparent 65%);
-    background-size: 60%;
-    background-position: 45% -50px;
-    background-repeat: no-repeat;
+    @include background-blob(black);
   }
   &.blue .header.--isActive .nav-bar {
-    background: radial-gradient(blue 40%, transparent 65%);
-    background-size: 60%;
-    background-position: 45% -50px;
-    background-repeat: no-repeat;
+    @include background-blob(blue);
   }
   .portfolio-spread {
     position: fixed;
