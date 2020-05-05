@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { isMobile } from 'react-device-detect';
 import './style.scss';
 
 function mapFiles(context, currentMedia) {
@@ -9,7 +10,6 @@ function mapFiles(context, currentMedia) {
     ...accumulator,
     [key.substring(2)]: values[index],
   }), {});
-
   return arr[currentMedia];
 }
 
@@ -68,21 +68,61 @@ class MediaViewer extends React.Component {
     const { count } = this.state;
     const newCount = count > media.length - 1 ? 0 : count;
     const settingLabel = mediaSetting ? 'Reduce' : 'Expand';
-
-    return (
-      <section className="mediaViewer">
-        <div className="loader-window">
-          <div className="loader"></div>
-        </div>
-        <div className="media-window">
-          {/* <div
+    const currentMedia = media[newCount].mediaSrc;
+    const vimeoSrc = `https://player.vimeo.com/video/${currentMedia}?autoplay=1&loop=1&autopause=0&background=1`;
+    const imgSrc = media[newCount].local ? mapFiles(require.context('../../database/media', true, /\.(png|gif|ico|jpg|jpeg)$/), currentMedia) : currentMedia;
+    const mediaElement = media[newCount].video ? <iframe src={vimeoSrc} title={media[newCount].caption} poster="https://i.vimeocdn.com/filter/overlay" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt={media[newCount].caption} src={imgSrc} />;
+    if (isMobile) {
+      return (
+        <section className="mediaViewer">
+          <div
             className="click-scrim"
             role="button"
             tabIndex="0"
             onClick={this.handleClickCounter}
             onKeyDown={this.handleClickCounter}
           >
-          </div> */}
+          </div>
+          <div className="loader-window">
+            <div className="loader"></div>
+          </div>
+          <figure
+            className={media[newCount].class ? `img-container ${media[newCount].class}` : 'img-container'}
+          >
+            {mediaElement}
+          </figure>
+          <div className="img-ui">
+            <button
+              type="button"
+              className="img-clickthrough"
+              tabIndex="0"
+              onClick={this.handleClickCounter}
+              onKeyDown={this.handleClickCounter}
+            >
+              Click or Key
+            </button>
+            <div className="img-counter">
+              {newCount + 1}/{media.length}
+            </div>
+            <button
+              type="button"
+              className={media[newCount].class ? `img-expander ${media[newCount].class}` : 'img-expander'}
+              tabIndex="0"
+              onClick={this.handleClickExpander}
+              onKeyDown={this.handleClickExpander}
+            >
+              {settingLabel} Media
+            </button>
+          </div>
+        </section>
+      );
+    }
+    return (
+      <section className="mediaViewer">
+        <div className="loader-window">
+          <div className="loader"></div>
+        </div>
+        <div className="media-window">
           <div className="media-items">
             {media.map((item) => (
               <MediaComponent item={item} key={item.id} />
