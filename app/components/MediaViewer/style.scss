@@ -5,28 +5,55 @@
   grid-template-rows: auto 30px;
   grid-template-rows: minmax(250px, auto) 30px;
   height: 100%;
-  .click-scrim, .loader-window, .img-container {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    cursor: pointer;
-    outline: 0;
-  }
   .loader-window {
     opacity: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     @include mobile-tablet {
       background: transparent;
       padding: 0 $gutter-size $gutter-size;
     }
   }
-  .click-scrim {
-    opacity: 0;
-    z-index: 2;
+  .media-window {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    cursor: pointer;
+    outline: 0;
+    z-index: 1;
+    overflow-y: scroll;
+    .media-items {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .click-scrim {
+      opacity: 0;
+      z-index: 2;
+    }
+    .media-items {
+      width: 100%;
+      height: 100%;
+      .media-item {
+        width: 100%;
+        margin: auto;
+        img, iframe {
+          width: 100%;
+          height: 100%;
+          max-height: 80vh;
+          object-fit: contain;
+        }
+      }
+    }
   }
   .img-container {
     z-index: 1;
