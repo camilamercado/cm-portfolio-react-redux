@@ -2,9 +2,10 @@
 
 @mixin background-blob($color: white) {
   background: radial-gradient($color 50%, transparent 70%);
-  background-size: 40% 100%;
-  background-position: 45% -100px;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, transparent 0%, $color 50%, transparent 100%);
+  // background-size: 40% 100%;
+  // background-position: 45% -100px;
+  // background-repeat: no-repeat;
 }
 
 .portfolio-page {
@@ -85,7 +86,7 @@
       }
     }
     &.--isActive {
-      height:75vh;
+      height:100vh;
       background: transparent;
       .nav-bar {
         @include background-blob;
