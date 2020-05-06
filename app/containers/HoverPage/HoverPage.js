@@ -21,7 +21,7 @@ class HoverPage extends Component { // eslint-disable-line react/prefer-stateles
     return (
       <section className={current.theme ? `hover-page portfolio-spread ${current.theme}` : 'hover-page  portfolio-spread'}>
         <div className="portfolio-nav last">
-          <a><h2>L a s t</h2></a>
+          <a>L a s t</a>
         </div>
         <div className="left">
           <MediaViewer media={current.media} mediaSetting={mediaSetting} updateMediaSetting={updateMediaSetting} />
@@ -40,7 +40,7 @@ class HoverPage extends Component { // eslint-disable-line react/prefer-stateles
         </div>
         <div className="text-buffer"></div>
         <div className="portfolio-nav next">
-          <a><h2>N e x t</h2></a>
+          <a>N e x t</a>
         </div>
       </section>
     );
