@@ -47,6 +47,22 @@ const data = [
     text: ''
   },
   {
+    projectTitle: 'Enlightenment Wines Meadery',
+    id: 'enlightenment-wines-meadery',
+    link: 'https://enlightenmentwines.com/',
+    linkTitle: 'www.enlightenmentwines.com',
+    tags: ['Ecwid Ecommerce', 'HTML', 'Javascript', 'CSS'],
+    imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
+    media: [
+      {
+        mediaSrc: '415171493',
+        video: true,
+        caption: 'Screen Recording of Enlightenment Wines Meadery, 2020',
+      },
+    ],
+    text: 'Straightforward webstore for Enlightent Wines Meadery'
+  },
+  {
     projectTitle: 'Kiwi Phong Nguyen Jewelry',
     id: 'kiwi-phong-nguyen-jewelry',
     theme: 'blue',

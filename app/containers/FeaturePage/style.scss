@@ -187,8 +187,10 @@
         span {
           display: none;
         }
-        h2 {
+        a {
           color: $theme-base;
+          height: 30px;
+          font-size: 30px;
         }
       }
     }
