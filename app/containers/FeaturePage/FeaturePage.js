@@ -39,10 +39,7 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
     return (
       <section className={current.theme ? `portfolio-spread ${settingLabel} ${current.theme}` : `portfolio-spread ${settingLabel}`}>
         <div className="portfolio-nav last">
-          <Link to={`${lastEntry.id}`}>
-            <h2>L a s t</h2>
-            <span>{lastEntry.projectTitle}</span>
-          </Link>
+          <Link to={`${lastEntry.id}`}> L a s t</Link>
         </div>
         <div className="left">
           <MediaViewer media={current.media} mediaSetting={mediaSetting} updateMediaSetting={updateMediaSetting} />
@@ -61,10 +58,7 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
         </div>
         <div className="text-buffer"></div>
         <div className="portfolio-nav next">
-          <Link to={`${nextEntry.id}`}>
-            <h2>N e x t</h2>
-            <span>{nextEntry.projectTitle}</span>
-          </Link>
+          <Link to={`${nextEntry.id}`}>N e x t</Link>
         </div>
       </section>
     );

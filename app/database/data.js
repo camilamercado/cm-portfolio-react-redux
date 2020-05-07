@@ -63,26 +63,35 @@ const data = [
     text: 'Straightforward webstore for Enlightent Wines Meadery'
   },
   {
+    projectTitle: 'Kiwi Phong Nguyen Jewelry',
+    id: 'kiwi-phong-nguyen-jewelry',
+    theme: 'blue',
+    link: 'https://www.instagram.com/kiwiphongnguyenjewelry',
+    tags: ['HTML', 'SCSS', 'Javascript'],
+    media: [
+      {
+        mediaSrc: 'kiwi-phong-nguyen-jewelry_02.jpg',
+        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
+        local: true
+      },
+    ],
+    text: 'Custom website for Kiwi Phong Nguyen Jewelry',
+  },
+  {
     projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
-    link: 'https://www.canopycanopycanopy.com/issues/24/contents/accessible-by-default',
-    linkTitle: 'https://www.canopycanopycanopy.com/accessible-by-default',
+    link: 'https://www.canopycanopycanopy.com/issues/24/contents/the-world-is-unknown',
+    linkTitle: 'https://www.canopycanopycanopy.com/the-world-is-unknown',
     tags: ['HTML', 'SCSS'],
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
-      {
-        mediaSrc: '396191882',
-        class: 'full-width',
-        video: true,
-        caption: 'Screen Recording of My Existential Limits To the Rectification of Past Wrongs, by Tiona Nekkia McClodden. Published by Triple Canopy on April 25, 2019.',
-      },
       {
         mediaSrc: '396036203',
         video: true,
         caption: 'Screen Recording of The World Is Unknown, by Carolyn Lazard. Published by Triple Canopy on April 19, 2019.',
       },
     ],
-    text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an interactive web treatment for a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.\n\n Media sourced from projects: “My Existential Limits To the Rectification of Past Wrongs…” by Tiona Nekkia McClodden, published by Triple Canopy on April 25, 2019 and “The World Is Unknown” by Carolyn Lazard, published by Triple Canopy on April 19, 2019.'
+    text: 'For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an interactive web treatment for a custom font created for the issue by designer Cary Potter. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.\n\n Media sourced from project “The World Is Unknown” by Carolyn Lazard, published by Triple Canopy on April 19, 2019.'
   },
   {
     projectTitle: 'Nightmare Wallpaper',
@@ -96,6 +105,11 @@ const data = [
         mediaSrc: '414924922',
         video: true,
         caption: 'Screen Recording of English Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
+      },
+      {
+        mediaSrc: 'Nightmare-Wallpaper_02.png',
+        caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
+        local: true
       },
       {
         mediaSrc: '414926011',

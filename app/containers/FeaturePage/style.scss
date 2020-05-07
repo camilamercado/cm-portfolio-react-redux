@@ -19,7 +19,7 @@
   padding: $gutter-size;
   background: $theme-base-secondary;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: calc(#{$gutter-size} * 2) calc(100vh - (#{$gutter-size} * 7)) calc(#{$gutter-size} * 2) #{$gutter-size};
+  grid-template-rows: 1em calc(100vh - calc(#{$gutter-size} * 5) + 2em) calc(#{$gutter-size}) 1em;
   grid-column-gap: $gutter-size;
   transition: 1s all ease;
   * {
@@ -28,6 +28,9 @@
 }
   &.Reduce {
     grid-template-columns: 3fr 1fr;
+    .left {
+      cursor: zoom-out;
+    }
   }
   @include desktop-narrow {    
     grid-template-columns: 1.5fr 1fr;
@@ -44,12 +47,12 @@
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 5;
     align-self: stretch;
-    height: calc(100vh - (#{$gutter-size} * 2));
     border: 1px solid $theme-alt;
-    // background: $theme-base;
     transition: 1s all ease;
+    cursor: zoom-in;
+    user-select: none;
     @include mobile-tablet {
       z-index: 1;
       grid-column-end: 1;
@@ -141,31 +144,25 @@
   .portfolio-nav {
     z-index: 1;
     user-select: none;
+    height: 1em;
     a {
-      text-decoration: none;
-      font-size: 0.75em;
-    }
-    h2, span {
-      height: $gutter-size;
-      line-height: $gutter-size;
-      padding: 0px;
-      margin: 0px;
-      text-align: justify;
-      display: block;
-      &:after { /* Justify last line */
-        content: '';
-        display: inline-block;
-        width: 100%;
+        text-decoration: none;
+        font-size: 1em;
+        height: 1em;
+        line-height: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        text-align: justify;
+        display: block;
+        &:after { /* Justify last line */
+          content: '';
+          display: inline-block;
+          width: 100%;
+        }
+        &:hover {
+          color: magenta;
+        }
       }
-    }
-    h2 {
-      font-family: Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-    }
-    span {
-      @include Sabon(italic, 400);
-      display: none;
-    }
     &.last {
       @include mobile-tablet { display: none; }
       grid-column-start: 2;
@@ -190,8 +187,10 @@
         span {
           display: none;
         }
-        h2 {
+        a {
           color: $theme-base;
+          height: 30px;
+          font-size: 30px;
         }
       }
     }
@@ -236,8 +235,4 @@
       background: linear-gradient(0deg, blue 20%,rgba(255,255,255,0) 100%);
     }
   }
-}
-
-.text-buffer {
-  display: none;
 }
