@@ -11,7 +11,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
   handleClick = () => {
     const { navState } = this.state;
-    console.log("hello", navState);
+    // console.log("hello", navState);
     this.setState(() => ({
       navState: !navState
     }));

@@ -9,8 +9,22 @@ import Marble from '../../images/marble-blue.png';
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.state = { navState: false };
+    this.state = { 
+      navState: false
+    };
+
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // handleChange(event) {
+  //   this.setState({password: event.target.value});
+  // }
+
+  // handleSubmit(event) {
+  //   alert('A name was submitted: ' + this.state.password);
+  //   event.preventDefault();
+  // }
 
   componentDidMount() {
     const { updateNavSetting } = this.props;
@@ -61,6 +75,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     const { match, portfolio, portfolioCurrent } = this.props;
     const { navState } = this.state;
+    
     if (portfolio.length > 2) {
       return (
         <div
@@ -82,7 +97,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
               <ul>
                 <h1>Projects</h1>
                 <span>❦</span>
-                {portfolio.map((item) =>
+                { portfolio.map((item) =>
                   // eslint-disable-next-line implicit-arrow-linebreak
                   <li
                     className={item.id === portfolioCurrent.id ? 'active' : null}
@@ -91,9 +106,18 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                     onMouseLeave={!isMobile ? this.handleItemLeave : null}
                   >
                     <Link to={`/projects/${item.id}`}>{item.projectTitle}</Link>
-                  </li>)
-                }
+                  </li>
+                )}
               </ul>
+              {/* <div id="password">
+                <form onSubmit={this.handleSubmit}>
+                  <label>
+                    Enter PW, or <a href="mailto:camilamercado11@gmail.com">contact me</a>
+                    <input type="text" value={this.state.password} onChange={this.handleChange}/>
+                  </label>
+                  <input type="submit" value="Submit" />
+                </form>
+              </div> */}
             </div>
           </div>
         </div>
