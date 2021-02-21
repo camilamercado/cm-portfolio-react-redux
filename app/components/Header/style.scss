@@ -49,6 +49,14 @@
         }
       }
     }
+    #password {
+      position: absolute;
+      top: 30px;
+      input[type=password] {
+        background: transparent;
+        margin: 1em 0;
+      }
+    }
   }
   @include mobile-tablet {
     &.--isActive {

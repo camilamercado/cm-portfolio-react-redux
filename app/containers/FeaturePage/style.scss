@@ -97,6 +97,12 @@
           max-width: unset;
           font-size: 1.9em;
         }
+        #project-date {
+          font-size: 0.45em;
+          margin-left: 10px;
+          vertical-align: top;
+          // position: absolute;
+        }
       }
       a {
         display: block;
@@ -111,6 +117,10 @@
           text-transform: uppercase;
           @include Sabon(italic, 400);
         }
+      }
+      .text-body {
+        margin-bottom: 2em;
+        a { display: inline!important; }
       }
       p {
         text-align: justify;
@@ -226,6 +236,7 @@
 .blue {
   background: blue;
   * { color: $theme-base; }
+  a { color: magenta!important; }
   .portfolio-spread {
     .left {
       border: 0px;

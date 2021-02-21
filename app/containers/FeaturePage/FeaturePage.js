@@ -37,7 +37,7 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
       );
     }
     return (
-      <section className={current.theme ? `portfolio-spread ${settingLabel} ${current.theme}` : `portfolio-spread ${settingLabel}`}>
+      <section id={current.id} className={current.theme ? `portfolio-spread ${settingLabel} ${current.theme}` : `portfolio-spread ${settingLabel}`}>
         <div className="portfolio-nav last">
           <Link to={`${lastEntry.id}`}> L a s t</Link>
         </div>
@@ -46,14 +46,19 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
         </div>
         <div className="right">
           <div className="text-container">
-            <h1>{current.projectTitle}</h1>
+            <h1>
+              {current.projectTitle}
+              <span id="project-date">{current.date}</span>
+            </h1>
             <a className="link" rel="noopener noreferrer" target="_blank" href={current.link}>{current.linkTitle ? current.linkTitle : current.link }</a>
             <ul>
               {current.tags.map((item) => <li key={item}>{item}</li>)}
             </ul>
-            <p>
-              {current.text}
-            </p>
+            <div class="text-body" dangerouslySetInnerHTML={{
+                __html: current.text
+              }}>
+              
+            </div>
           </div>
         </div>
         <div className="text-buffer"></div>

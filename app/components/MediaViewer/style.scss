@@ -6,6 +6,9 @@
   grid-template-rows: minmax(250px, auto) 30px;
   height: 100%;
   .loader-window {
+    height: 100vh;
+    position: absolute;
+    top: 0px;
     opacity: 1;
     display: flex;
     align-items: center;
@@ -34,15 +37,22 @@
     .media-items {
       width: 100%;
       height: 100%;
+      .blue & { background: blue; }
+      .light & { background: white; }
+      .dark & { background: black; }
       .media-item {
+        height: calc(100vh - 58px);
+        align-items: center;
+        justify-content: center;
+        display: flex;
         &.video {
           position: relative;
           padding-bottom: 70vh;
-          height: 0;
+          // height: 0;
           margin: 0;
         }
         &.img {
-          width: 100%;
+          max-width: 100%;
           margin: auto;
         }
         &:only-child img {
@@ -60,7 +70,7 @@
           pointer-events: none;
         }
         img {
-          width: 100%;
+          max-width: 100%;
           height: 100%;
           max-height: 80vh;
           object-fit: contain;
@@ -79,6 +89,11 @@
     z-index: 2;
     * {
       line-height: $gutter-size;
+    }
+    .scroll {
+      letter-spacing: 1px;;
+      user-select: none;
+      @include Sabon(italic, 400);
     }
     .img-expander {
       background: $theme-base;
@@ -124,6 +139,9 @@
       cursor: pointer;
       outline: 0;
     }
+    .loader-window {
+      height: 100%
+    }
     .click-scrim {
       opacity: 0;
       z-index: 2;
@@ -133,6 +151,9 @@
       height: auto;
       display: block;
       padding-top: 0;
+      display: flex;
+      align-content: center;
+      justify-content: center;
       &.full-width {
         margin: 0px;
         overflow: hidden;
@@ -172,7 +193,8 @@
       * {
         line-height: $gutter-size;
       }
-      .img-counter {
+      .img-counter,
+      .scroll {
         letter-spacing: 1px;;
         user-select: none;
         @include Sabon(italic, 400);
@@ -182,5 +204,26 @@
         display: none;
       }
     }
+  }
+}
+
+
+.portfolio-spread#radish {
+  img {
+    border: 1px solid brown;
+  }
+}
+
+.portfolio-spread#department {
+  img {
+    border: 1px solid grey;
+    margin: 0 20px;
+    max-width: calc(100% - 20px);
+    height: auto;
+  }
+
+  iframe #player {
+    border: 1px solid lightgrey;
+    margin: 0 20px;
   }
 }
