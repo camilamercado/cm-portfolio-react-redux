@@ -137,7 +137,7 @@ class MediaViewer extends React.Component {
         </div>
         <div className="img-ui">
           <div className="scroll">
-            SCROLL
+          { media.length > 1  ? 'SCROLL' : '' }
           </div>
           {/* <button
             type="button"
