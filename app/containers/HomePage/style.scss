@@ -127,8 +127,9 @@ article {
 @include mobile-tablet {
   .home-page {
     display: unset;
-    // animation-name: bg-shift-mobile;
-    // background: rgb(243, 63, 63);
+    animation-name: bg-shift-mobile;
+    background: rgb(243, 63, 63);
+    animation-duration: 10s;
     .archway {
       display: none;
       &:nth-of-type(3){
@@ -137,7 +138,7 @@ article {
           width: 240px;
           height: 400px;
           animation-name: glow;
-          animation-duration: 20s;
+          animation-duration: 10s;
           animation-iteration-count: infinite;
           animation-direction: alternate-reverse;
           border-radius: 0px;

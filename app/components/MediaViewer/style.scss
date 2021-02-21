@@ -213,3 +213,17 @@
     border: 1px solid brown;
   }
 }
+
+.portfolio-spread#department {
+  img {
+    border: 1px solid grey;
+    margin: 0 20px;
+    max-width: calc(100% - 20px);
+    height: auto;
+  }
+
+  iframe #player {
+    border: 1px solid lightgrey;
+    margin: 0 20px;
+  }
+}
