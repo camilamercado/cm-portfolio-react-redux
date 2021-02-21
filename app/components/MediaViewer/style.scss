@@ -6,6 +6,9 @@
   grid-template-rows: minmax(250px, auto) 30px;
   height: 100%;
   .loader-window {
+    height: 100vh;
+    position: absolute;
+    top: 0px;
     opacity: 1;
     display: flex;
     align-items: center;
@@ -136,6 +139,9 @@
       cursor: pointer;
       outline: 0;
     }
+    .loader-window {
+      height: 100%
+    }
     .click-scrim {
       opacity: 0;
       z-index: 2;
@@ -145,6 +151,9 @@
       height: auto;
       display: block;
       padding-top: 0;
+      display: flex;
+      align-content: center;
+      justify-content: center;
       &.full-width {
         margin: 0px;
         overflow: hidden;

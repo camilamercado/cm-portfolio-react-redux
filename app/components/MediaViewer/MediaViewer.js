@@ -22,7 +22,13 @@ const MediaComponent = (currentItem) => {
   return (
     <figure
       className={item.video ? 'media-item video' : 'media-item img'}
-    >
+    > 
+      { item.video 
+        ? <div className="loader-window">
+            <div className="loader"></div>
+          </div>
+        : null 
+      }
       { mediaElement }
     </figure>
   );
@@ -95,12 +101,15 @@ class MediaViewer extends React.Component {
             onKeyDown={this.handleClickCounter}
           >
           </div>
-          <div className="loader-window">
-            <div className="loader"></div>
-          </div>
           <figure
             className={media[newCount].class ? `img-container ${media[newCount].class}` : 'img-container'}
           >
+            { media[newCount].video 
+              ? <div className="loader-window">
+                  <div className="loader"></div>
+                </div>
+              : null 
+            }
             {mediaElement}
           </figure>
           <div className="img-ui">
@@ -113,9 +122,6 @@ class MediaViewer extends React.Component {
     }
     return (
       <section className="mediaViewer">
-        <div className="loader-window">
-          <div className="loader"></div>
-        </div>
         <div
           className="media-window"
           role="button"
