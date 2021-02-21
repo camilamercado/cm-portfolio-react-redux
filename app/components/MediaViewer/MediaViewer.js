@@ -18,6 +18,7 @@ const MediaComponent = (currentItem) => {
   const vimeoSrc = `https://player.vimeo.com/video/${item.mediaSrc}?autoplay=1&loop=1&autopause=0&background=1`;
   const imgSrc = item.local ? mapFiles(require.context('../../database/media', true, /\.(png|gif|ico|jpg|jpeg)$/), currentMedia) : currentMedia;
   const mediaElement = item.video ? <iframe src={vimeoSrc} title={item.caption} poster="https://i.vimeocdn.com/filter/overlay" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe> : <img alt={item.caption} src={imgSrc} />;
+  console.log("MEDIA ELM", mediaElement)
   return (
     <figure
       className={item.video ? 'media-item video' : 'media-item img'}
@@ -129,6 +130,9 @@ class MediaViewer extends React.Component {
           </div>
         </div>
         <div className="img-ui">
+          <div className="scroll">
+            SCROLL
+          </div>
           {/* <button
             type="button"
             className={media[newCount].class ? `img-expander ${media[newCount].class}` : 'img-expander'}

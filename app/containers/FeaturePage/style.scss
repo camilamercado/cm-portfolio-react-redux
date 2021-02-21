@@ -112,6 +112,10 @@
           @include Sabon(italic, 400);
         }
       }
+      .text-body {
+        margin-bottom: 2em;
+        a { display: inline!important; }
+      }
       p {
         text-align: justify;
         text-align-last: center;
@@ -226,6 +230,7 @@
 .blue {
   background: blue;
   * { color: $theme-base; }
+  a { color: magenta!important; }
   .portfolio-spread {
     .left {
       border: 0px;
