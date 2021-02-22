@@ -3,7 +3,8 @@ const data = [
     projectTitle: 'Dept. Architecture',
     id: 'department',
     date: '2020',
-    link: 'dept.llc',
+    link: 'https://dept.llc/',
+    linkTitle: 'https://dept.llc/',
     tags: ['Kirby', 'PHP', 'SCSS', 'Javascript'],
     imageUrl: 'software-studios_00.png',
     media: [
