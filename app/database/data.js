@@ -28,7 +28,7 @@ const data = [
         local: true
       },
     ],
-    text: '<p>Website for Dept. (Department, LLC), a landscape architecture and urban design studio. Designed by <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>.</p><p>Portfolio website built with the Kirby CMS, with advanced features allowing for project filtering by type, customizable grid layout for images on project pages, and randomizing image scatter on the home page.',
+    text: '<p>Website for Dept. (Department, LLC), a landscape architecture and urban design studio. Design by <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>.</p><p>Portfolio website built with the Kirby CMS, with advanced features allowing for project filtering by type, customizable grid layout for images on project pages, and randomizing image scatter on the home page.',
   },
   {
     projectTitle: 'RADISH',
@@ -37,7 +37,7 @@ const data = [
     date: '2020',
     link: 'https://www.radishtogo.com/',
     linkTitle: 'https://www.radishtogo.com/',
-    tags: ['Node', 'Handlebars.js', 'Express', 'MongoDB', 'Airtable API', 'Heroku' ],
+    tags: ['Node', 'EJS', 'Express', 'MongoDB', 'Airtable API', 'Heroku' ],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
     media: [
       {
@@ -56,7 +56,7 @@ const data = [
         local: true
       },
     ],
-    text: '<p>An online database/directory of New York City based Restaurants offering direct delivery to consumers instead of (or in addition to) food delivery Apps such as Grubhub and Seamless. The project is comprised of the following components:</p><h3>Directory Website</h3><p>A location based directory which allows users to filter search results by restaurant and delivery types. Built with a Node.js Express server, and handlebars template rendering. Website designed with <a href="http://riaroberts.net/" target="_blank">Ria Roberts</a>, who was also responsible for the product branding.</p><h3>Database Client</h3><p>This project uses a MongoDB database making API to data managed on an Airtable admin interace. This pattern enables administrators to directly approve, organize, and edit information submitted by participating Restaurants.</p>'
+    text: '<p>An online database/directory of New York City based Restaurants offering direct delivery to consumers instead of (or in addition to) food delivery Apps such as Grubhub and Seamless. The project is comprised of the following components:</p><h3>Directory Website</h3><p>A location based directory which allows users to filter search results by restaurant and delivery types. Built with a Node.js Express server, and EJS template rendering. Website designed with <a href="http://riaroberts.net/" target="_blank">Ria Roberts</a>, who was also responsible for the product branding.</p><h3>Database Client</h3><p>This project uses a MongoDB database making API to data managed on an Airtable admin interace. This pattern enables administrators to directly approve, organize, and edit information submitted by participating Restaurants.</p>'
   },
   {
     projectTitle: 'Kiwi Phong Nguyen Jewelry',
@@ -82,7 +82,7 @@ const data = [
         local: true
       },
     ],
-    text: '<p>Custom placeholder website for Kiwi Phong Nguyen Jewelry.<br/>Deployed on Github Pages.<p>',
+    text: '<p>Playful placeholder website for Kiwi Phong Nguyen Jewelry.<br/>Deployed on Github Pages.<p>',
   },
   {
     projectTitle: 'Software Studios',
@@ -113,7 +113,7 @@ const data = [
         caption: 'Screen Recording of Software Studios Print Size Toggle, 2020',
       }
     ],
-    text: '<p>Custom webstore & portfolio for Software Studios, LLC built on Shopify. Features a custom feature which renders a scale model of print size options and allows users to toggle between these variants.<p>',
+    text: '<p>Custom webstore & portfolio for Software Studios, LLC built on Shopify. Features a custom feature which renders a scale model of print size options and allows users to toggle between variants.<p>',
   },
   {
     projectTitle: 'Arial All Typeface',
@@ -157,16 +157,16 @@ const data = [
         caption: 'Screen Recording of Chinese Language version of Nightmare Wallaper, by Pak Sheung Chuen. Published by Triple Canopy on May 01, 2018.',
       },
     ],
-    text: '<p>“Nightmare Wallpaper,” is a multimedia essay by Pak Sheung Chuen, designed by <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>, and produced by Triple Canopy. The project was built in both English and Chinese verions, allowing readers to navigate a selection of journal entries, photographs and original artworks collected and produced by the artist to overcome the depression and sense of disempowerment that he and so many others experienced in the wake of Hong Kong’s 2014 Umbrella Movement.</p><p>“Nightmare Wallpaper” is an adaptation of an artwork that was first presented by the author in 2017 at an exhibition at Para Site in Hong Kong curated by Freya Chou.</p>',
+    text: '<p>“Nightmare Wallpaper,” is a multimedia essay by Pak Sheung Chuen, design by <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>, and produced by Triple Canopy. The project was built in both English and Chinese verions, allowing readers to navigate a selection of journal entries, photographs and original artworks collected and produced by the artist to overcome the depression and sense of disempowerment that he and so many others experienced in the wake of Hong Kong’s 2014 Umbrella Movement.</p><p>“Nightmare Wallpaper” is an adaptation of an artwork that was first presented by the author in 2017 at an exhibition at Para Site in Hong Kong curated by Freya Chou.</p>',
   },
   {
     projectTitle: 'Software Studios Legacy-Sites',
     id: 'software-studios-legacy',
     date: '2016–2018',
     theme: 'dark',
-    link: 'https://web.archive.org/web/20161007032550/http://software-studios.com/',
-    linkTitle: 'web.archive.org/software-studios.com',
-    tags: ['React.js', 'SCSS'],
+    link: '',
+    linkTitle: '',
+    tags: [''],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
     media: [
       {
@@ -178,6 +178,11 @@ const data = [
         mediaSrc: '396186801',
         video: true,
         caption: 'Screen Recording Updated Software Studios Website, 2017–2019',
+      },
+      {
+        mediaSrc: '515095716',
+        video: true,
+        caption: 'Screen Recording of Software Studios Portfolio, 2015–2016',
       },
     ],
     text: ''
