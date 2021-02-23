@@ -25,6 +25,7 @@
   * {
     color: $theme-alt;
     @include Sabon;
+    font-style: revert;
 }
   &.Reduce {
     grid-template-columns: 3fr 1fr;

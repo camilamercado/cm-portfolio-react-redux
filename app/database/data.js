@@ -5,7 +5,7 @@ const data = [
     date: '2020',
     link: 'https://dept.llc/',
     linkTitle: 'https://dept.llc/',
-    tags: ['Kirby', 'PHP', 'SCSS', 'Javascript'],
+    tags: ['Kirby CMS', 'PHP', 'SCSS', 'Javascript'],
     imageUrl: 'software-studios_00.png',
     media: [
       {
@@ -65,7 +65,7 @@ const data = [
     theme: 'blue',
     date: '2020',
     link: 'https://kiwinguyen.com/',
-    tags: ['HTML', 'SCSS', 'Javascript'],
+    tags: ['HTML', 'CSS', 'Javascript'],
     media: [
       {
         mediaSrc: '514744528',
@@ -83,7 +83,7 @@ const data = [
         local: true
       },
     ],
-    text: '<p>Playful placeholder website for Kiwi Phong Nguyen Jewelry.<br/>Deployed on Github Pages.<p>',
+    text: '<p>Playful & interactive splashpage for Kiwi Phong Nguyen Jewelry.<br/>Deployed on Github Pages.<p>',
   },
   {
     projectTitle: 'Software Studios',
@@ -167,7 +167,7 @@ const data = [
     theme: 'dark',
     link: '',
     linkTitle: '',
-    tags: [''],
+    tags: ['Node', 'Express', 'Gulp', 'HTML', 'SCSS', 'Javascript'],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
     media: [
       {
@@ -189,6 +189,40 @@ const data = [
     text: ''
   },
   {
+    projectTitle: 'I Ching/Binary Dial',
+    id: 'i-ching-dial',
+    date: '2016',
+    theme: 'dark',
+    tags: ['React', 'D3'],
+    imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
+    media: [
+      {
+        mediaSrc: '515502945',
+        class: 'full-width',
+        video: true,
+        caption: 'Screen recording of a graphical representation of the Shao Yong sequence in radial and bar format.',
+      },
+      {
+        mediaSrc: '396309491',
+        class: 'full-width',
+        video: true,
+        caption: 'Screen recording of a graphical representation of the Shao Yong sequence in radial format data glitching.',
+      },
+      {
+        mediaSrc: '515503083',
+        class: 'full-width',
+        video: true,
+        caption: 'Screen recording of a graphical representation of a binary table and Shao Yong sequence in bar format.',
+      },
+      {
+        mediaSrc: 'I-Ching-Dial_01.png',
+        caption: 'Screen shot of a graphical representation of the Shao Yong sequence in radial and bar format.',
+        local: true
+      },
+    ],
+    text: '<p>Graphical experimentation on the relationship between the Shao Yong sequence and binary code. Each graph utilizes the same data set comprised of binary values 0–64. The initial sequence was created in the 11th century/Song synasty by Chinese poet, philospher and historian Shao Yong(邵雍)– six centuries before the attributed advent of binary code by German mathematician Gottfried Wilhelm Leibniz in his 1703 paper <em>“Explanation of Binary Arithmetic”</em>.</p>',
+  },
+  {
     projectTitle: 'CM Portfolio',
     id: 'cm-portfolio',
     date: '2020',
@@ -204,39 +238,6 @@ const data = [
     ],
     text: '<p>This portfolio was built with React ontop of of the <a href="https://github.com/flexdinesh/react-redux-boilerplate" href="_blank">react-reduct-boilerplate</a> by <a href="https://github.com/flexdinesh">@flexdinesh</a>.</p>'
   },
-  // {
-  //   projectTitle: 'I Ching Dial',
-  //   id: 'i-ching-dial',
-  //   theme: 'dark',
-  //   link: 'https://web.archive.org/web/20160308193522/http://software-studios.com/',
-  //   linkTitle: 'web.archive.org/software-studios.com',
-  //   tags: ['HTML', 'Javascript', 'CSS'],
-  //   imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
-  //   media: [
-  //     {
-  //       mediaSrc: '396309491',
-  //       class: 'full-width',
-  //       video: true,
-  //       caption: 'Screen Recording of My Existential Limits To the Rectification of Past Wrongs, by Tiona Nekkia McClodden. Published by Triple Canopy on April 25, 2019.',
-  //     },
-  //     {
-  //       mediaSrc: 'I-Ching-Dial_03.png',
-  //       caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
-  //       local: true
-  //     },
-  //     {
-  //       mediaSrc: 'I-Ching-Dial_02.png',
-  //       caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
-  //       local: true
-  //     },
-  //     {
-  //       mediaSrc: 'I-Ching-Dial_01.png',
-  //       caption: 'Screenshot of Software Studios Webstore Product Page, 2020',
-  //       local: true
-  //     },
-  //   ],
-  //   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  // },
 ];
 
 export default data;

@@ -220,9 +220,19 @@ article {
               margin-left: 0.5em;
               margin-left: 8px;
               font-size: 1.75em;
+              vertical-align: top;
+            }
+            ul.keywords {
+              display: inline;
+              vertical-align: top;
+              li {
+                display: inline;
+                margin-left: 10px;
+              }
             }
             @include mobile-tablet {
-              &:after {
+              &:after,
+              ul.keywords {
                 display: none;
               }
             }

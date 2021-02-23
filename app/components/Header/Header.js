@@ -106,6 +106,11 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                     onMouseLeave={!isMobile ? this.handleItemLeave : null}
                   >
                     <Link to={`/projects/${item.id}`}>{item.projectTitle}</Link>
+                    {match.path === '/' ? 
+                      <ul className="keywords">
+                        {item.tags.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    : null }
                   </li>
                 )}
               </ul>
