@@ -1,5 +1,22 @@
 const data = [
   {
+    projectTitle: 'Kinfolk History',
+    id: 'kinfolk',
+    date: '2021',
+    link: 'https://kinfolkhistory.com/',
+    linkTitle: 'https://kinfolkhistory.com/',
+    tags: ['Vue.js', 'Vuex', 'PDF.js', 'SCSS'],
+    imageUrl: 'software-studios_00.png',
+    media: [
+      {
+        mediaSrc: '539183039',
+        video: true,
+        caption: 'Screen recording of Kinfolk History website, 2021',
+      }
+    ],
+    text: '<p>The Kinfolk History Web Portal was made as a part of <a href="https://www.moversandshakersnyc.com/monuments-project" target="_blank">The Monuments Project</a>– a catalog of augmented reality monuments of women, people of color and the LGBTQIA+ icons produced by <a href="https://www.moversandshakersnyc.com/" target="_blank">Movers & Shakers NYC</a>. The projects first release included an <a href="https://apps.apple.com/us/app/kinfolk-ar/id1510605922" target="_blank">AR app</a> that allows users to bring history to life with augmented reality monuments celecbrating six Black icons, and a Web Portal which provides further access to pedagocial and textual resources organized by the <a href="https://www.instagram.com/langstonleague/?hl=en" target="_blank">Langston League</a> corresponding to the figures celebrated in the app.</p></p>The AR App and Web development was done by <a href="https://www.pariahinteractive.com/portfolio/kinfolk" target="_blank">Pariah Interactive</a>, who brought me on to handle the front-end development using Vue.JS, including features such as the in-browser PDF viewer and predictive search bar.</p><h3>Featured Component Libraries</h3><ul><li>–The PDF Viewer utilizes the <a href="https://mozilla.github.io/pdf.js/" target="_blank">Pdf.js</a> library and was sourced from a great <a href="https://github.com/rossta/vue-pdfjs-demo" target="_blank">demo</a> by <a href="https://github.com/rossta" target="_blank">@rossta</a></li><li>–Predictive search built using the <a href="https://www.npmjs.com/package/@trevoreyre/autocomplete-vue" target="_blank">Autocomplete-vue</a> package</li><li>–“Did you mean” page built using the <a href="https://www.npmjs.com/package/fastest-levenshtein" target="_blank">fastest-levenshtein</a> package</li></ul><h3>Press</h3><ul><li>–Hyperallergic (2021, February 11). <em>An AR App Wants to Correct the Scarcity of Monuments to Historical Leaders of Color</em>. Retrieved from <a href="https://hyperallergic.com/621437/monuments-project-app-ar/" target="_blank">https://hyperallergic.com/621437/monuments-project-app-ar/</a></li><li>–The Hill (2021, January 29). <em>How AR is bringing Black history to life for middle schoolers across America</em>. Retrieved from <a href="https://thehill.com/changing-america/enrichment/education/536562-how-vr-is-bringing-black-history-to-life-for-middle" target="_blank">https://thehill.com/changing-america/enrichment/education/536562-how-vr-is-bringing-black-history-to-life-for-middle</a><li></u>',
+  },
+  {
     projectTitle: 'Dept. Architecture',
     id: 'department',
     date: '2020',

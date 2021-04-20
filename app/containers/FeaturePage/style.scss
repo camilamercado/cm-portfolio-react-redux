@@ -122,6 +122,14 @@
       .text-body {
         margin-bottom: 2em;
         a { display: inline!important; }
+        ul {
+          // list-style-type: circle;
+          li {
+            text-transform: initial;
+            font-style: normal;
+            margin-bottom: 1em;
+          }
+        }
       }
       p {
         text-align: justify;
