@@ -61,6 +61,7 @@ article {
   z-index: 2;
   transition: all 2s ease;
   transition: mask-image .3s;
+  height: 100%; // safari fix
   &.hover-state {
     -webkit-mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%,  black 50%);
     mask-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.719) 25%,  black 50%);
