@@ -2,6 +2,10 @@
   "name": "react-redux-boilerplate",
   "version": "1.0.0",
   "description": "A minimal react-redux boilerplate with all the best practices",
+  "engines": {
+    "node": ">=8.15.1",
+    "npm": ">=5"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/flexdinesh/react-redux-boilerplate.git"
@@ -117,9 +121,5 @@
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
-  },
-  "engines": {
-    "node": ">=8.15.1",
-    "npm": ">=5"
   }
 }
