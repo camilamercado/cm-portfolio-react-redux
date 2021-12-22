@@ -79,28 +79,33 @@ const data = [
   {
     projectTitle: 'Kiwi Phong Nguyen Jewelry',
     id: 'kiwi-phong-nguyen-jewelry',
-    theme: 'blue',
-    date: '2020',
-    link: 'https://kiwinguyen.com/',
-    tags: ['HTML', 'CSS', 'Javascript'],
+    // theme: 'blue',
+    date: '2021–ongoing',
+    link: 'https://kiwi-nguyen.herokuapp.com/',
+    tags: ['React', 'Shopify', 'Shopify Buy SDK'],
     media: [
       {
-        mediaSrc: '514744528',
+        mediaSrc: '659445416',
         video: true,
-        caption: 'Screen Recording of Kiwi Phong Nguyen Jewelry website, 2020',
+        caption: 'Screen recording of Kiwi Phong Nguyen Jewelry website,, 2021',
       },
       {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_02.jpg',
-        caption: 'Screenshot of Kiwi Phong Nguyen Jewelry website, 2020',
+        mediaSrc: 'kpn-2021-00.png',
+        caption: 'Screenshot of Kiwi Phong Nguyen Jewelry website, 2021',
         local: true
       },
       {
-        mediaSrc: 'kiwi-phong-nguyen-jewelry_04.png',
-        caption: 'Screenshot of Kiwi Phong Nguyen Jewelry website, 2020',
+        mediaSrc: 'kpn-2021-1.png',
+        caption: 'Screenshot of Kiwi Phong Nguyen Jewelry website, 2021',
+        local: true
+      },
+      {
+        mediaSrc: 'kpn-2021-2.png',
+        caption: 'Screenshot of Kiwi Phong Nguyen Jewelry website, 2021',
         local: true
       },
     ],
-    text: '<p>Playful & interactive splashpage for Kiwi Phong Nguyen Jewelry.<br/>Deployed on Github Pages.<p>',
+    text: '<p>Playful & interactive website for Kiwi Phong Nguyen Jewelry built with React and the Shopify Buy Javascript SDK. This website was designed by me & development is still ongoing.<p>',
   },
   {
     projectTitle: 'Software Studios',
@@ -148,7 +153,7 @@ const data = [
         caption: 'Screen Recording of The World Is Unknown, by Carolyn Lazard. Published by Triple Canopy on April 19, 2019.',
       },
     ],
-    text: '<p>For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I developed an interactive web treatment for a custom font created for the issue by designer <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>– who also designed the layout. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS.\n\n Media sourced from project “The World Is Unknown” by Carolyn Lazard, published by Triple Canopy on April 19, 2019.</p>'
+    text: '<p>For the 24th Issue of Triple Canopy’s online magazine “Risk Pool”, I helped to develop an interactive web treatment for a custom font created for the issue by designer <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>. The font, “Arial All” was designed to highlight the accessibility failings of the Arial Typeface for those with reading disabilities through the construction of an appended armature with adjusted forms.\n\n By hovering over the typeface, a transition is activated which removes the highlighted armature and reveals the original Arial font. Because traditional font formats do not support multi-colored fonts, this effect had to be achieved by the layering of multiple fonts in the browser with CSS. The initial developer on the project was Maxwell Simmer, Triple Canopy’s lead front-end developer.\n\n Media sourced from project “The World Is Unknown” by Carolyn Lazard, published by Triple Canopy on April 19, 2019.</p>'
   },
   {
     projectTitle: 'Nightmare Wallpaper',
