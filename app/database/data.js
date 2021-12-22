@@ -5,7 +5,7 @@ const data = [
     date: '2021',
     link: 'https://kinfolkhistory.com/',
     linkTitle: 'https://kinfolkhistory.com/',
-    tags: ['Vue.js', 'Vuex', 'PDF.js', 'SCSS'],
+    tags: ['Vue.js', 'Vuex', 'PDF.js'],
     imageUrl: 'software-studios_00.png',
     media: [
       {
@@ -22,7 +22,7 @@ const data = [
     date: '2020',
     link: 'https://dept.llc/',
     linkTitle: 'https://dept.llc/',
-    tags: ['Kirby CMS', 'PHP', 'SCSS', 'Javascript'],
+    tags: ['Kirby CMS', 'PHP', 'Javascript'],
     imageUrl: 'software-studios_00.png',
     media: [
       {
@@ -55,7 +55,7 @@ const data = [
     date: '2020',
     link: 'https://ancient-escarpment-06918.herokuapp.com/search/11205',
     linkTitle: 'https://www.radishtogo.com/',
-    tags: ['Node', 'EJS', 'Express', 'MongoDB', 'Airtable API', 'Heroku' ],
+    tags: ['Node', 'EJS', 'Express', 'MongoDB', 'Airtable API', 'Heroku'],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
     media: [
       {
@@ -144,7 +144,7 @@ const data = [
     date: '2019',
     link: 'https://www.canopycanopycanopy.com/issues/24/contents/the-world-is-unknown',
     linkTitle: 'https://www.canopycanopycanopy.com/the-world-is-unknown',
-    tags: ['HTML', 'SCSS'],
+    tags: ['HTML', 'CSS'],
     imageUrl: 'https://vignette.wikia.nocookie.net/darkstalkers/images/e/e1/NWD_Felicia_01.png/revision/latest?cb=20110416215551',
     media: [
       {
@@ -161,7 +161,7 @@ const data = [
     date: '2018',
     link: 'https://www.canopycanopycanopy.com/issues/24/contents/nightmare-wallpaper',
     linkTitle: 'https://www.canopycanopycanopy.com/nightmare-wallpaper',
-    tags: ['HTML', 'Javascript', 'SCSS'],
+    tags: ['HTML', 'Javascript', 'CSS'],
     imageUrl: 'https://www.fightersgeneration.com/nz3/character/rikuo-darkstalkers-revenge-artwork-high-contrast.png',
     media: [
       {
@@ -189,7 +189,7 @@ const data = [
     theme: 'dark',
     link: '',
     linkTitle: '',
-    tags: ['Node', 'Express', 'Gulp', 'HTML', 'SCSS', 'Javascript'],
+    tags: ['Node', 'Express', 'Gulp', 'HTML', 'CSS', 'Javascript'],
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
     media: [
       {
