@@ -1,4 +1,4 @@
-# A React Portfoio Website 
+# A React Portfolio Website 
 
 https://evening-earth.camilamercado.com/ 
 
