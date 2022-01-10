@@ -9,13 +9,17 @@ import PropTypes from 'prop-types';
 
 class FeaturePage extends Component { // eslint-disable-line react/prefer-stateless-function
   componentDidMount() {
-    const { portfolio, updatePortfolioCurrent, match, portfolioCurrent } = this.props;
+    const {
+      portfolio, updatePortfolioCurrent, match
+    } = this.props;
     const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
     updatePortfolioCurrent(currentIndex);
   }
 
   componentDidUpdate() {
-    const { portfolio, updatePortfolioCurrent, match, portfolioCurrent } = this.props;
+    const {
+      portfolio, updatePortfolioCurrent, match, portfolioCurrent
+    } = this.props;
     const currentIndex = portfolio.findIndex(({ id }) => id === match.params.portfolioId);
     updatePortfolioCurrent(currentIndex, portfolioCurrent, match.params);
   }
@@ -54,10 +58,12 @@ class FeaturePage extends Component { // eslint-disable-line react/prefer-statel
             <ul>
               {current.tags.map((item) => <li key={item}>{item}</li>)}
             </ul>
-            <div class="text-body" dangerouslySetInnerHTML={{
+            <div
+              className="text-body"
+              dangerouslySetInnerHTML={{
                 __html: current.text
-              }}>
-              
+              }}
+            >
             </div>
           </div>
         </div>
