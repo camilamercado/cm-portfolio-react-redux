@@ -1,5 +1,37 @@
 const data = [
   {
+    projectTitle: 'MoMA PS1',
+    id: 'ps1',
+    date: '2022',
+    link: 'https://momaps1.org/',
+    linkTitle: 'https://momaps1.org/',
+    tags: ['Ruby on Rails', 'Javascript'],
+    imageUrl: 'ps1_5.png',
+    media: [
+      {
+        mediaSrc: 'ps1_5.png',
+        local: true,
+        caption: 'Screenshot of MoMA PS1 website, 2022',
+      },
+      {
+        mediaSrc: 'ps1_1.png',
+        local: true,
+        caption: 'Screenshot of MoMA PS1 website, 2022',
+      },
+      {
+        mediaSrc: 'ps1_3.png',
+        local: true,
+        caption: 'Screenshot of MoMA PS1 website, 2022',
+      },
+      {
+        mediaSrc: 'ps1_6.jpg',
+        local: true,
+        caption: 'Screenshot of MoMA PS1 website, 2022',
+      }
+    ],
+    text: '<p>I worked as a primary developer on the MoMA PS1 website after joining the web design & development studio <a href="https://linkedbyair.net">Linked by Air</a> as a software engineer in 2022.</p><p>Linked by Air produced the design and development of the website redesign along with an <a href="https://www.momaps1.org/colophon">extensive team</a> of contributors from PS1, and other outside studios.</p>',
+  },
+  {
     projectTitle: 'Kinfolk History',
     id: 'kinfolk',
     date: '2021',
@@ -49,34 +81,6 @@ const data = [
     text: '<p>Website for Dept. (Department, LLC), a landscape architecture and urban design studio. Design by <a href="https://www.carypotter.com/" target="_blank">Cary Potter</a>.</p><p>Portfolio website built with the Kirby CMS, with advanced features allowing for project filtering by type, customizable grid layout for images on project pages, and randomizing image scatter on the home page.',
   },
   {
-    projectTitle: 'RADISH',
-    id: 'radish',
-    theme: 'light',
-    date: '2020',
-    link: 'https://ancient-escarpment-06918.herokuapp.com/search/11205',
-    linkTitle: 'https://www.radishtogo.com/',
-    tags: ['Node', 'EJS', 'Express', 'MongoDB', 'Airtable API', 'Heroku'],
-    imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
-    media: [
-      {
-        mediaSrc: 'RADISH_02.png',
-        caption: 'Screenshot of RADISH website search results page, 2021',
-        local: true
-      },
-      {
-        mediaSrc: 'RADISH_03.png',
-        caption: 'Screenshot of RADISH website search results page in mobile, 2021',
-        local: true
-      },
-      {
-        mediaSrc: 'RADISH_04.png',
-        caption: 'Screenshot of RADISH website search results page in mobile, 2021',
-        local: true
-      },
-    ],
-    text: '<p>An online database/directory of New York City based Restaurants offering direct delivery to consumers instead of (or in addition to) food delivery Apps such as Grubhub and Seamless. The project is comprised of the following components:</p><h3>Directory Website</h3><p>A location based directory which allows users to filter search results by restaurant and delivery types. Built with a Node.js Express server, and EJS template rendering. Website designed with <a href="http://riaroberts.net/" target="_blank">Ria Roberts</a>, who was also responsible for the product branding.</p><h3>Database Client</h3><p>This project uses a MongoDB database making API to data managed on an Airtable admin interace. This pattern enables administrators to directly approve, organize, and edit information submitted by participating Restaurants.</p>'
-  },
-  {
     projectTitle: 'Kiwi Phong Nguyen Jewelry',
     id: 'kiwi-phong-nguyen-jewelry',
     // theme: 'blue',
@@ -106,6 +110,34 @@ const data = [
       },
     ],
     text: '<p>Playful & interactive website for Kiwi Phong Nguyen Jewelry built with React and the Shopify Buy Javascript SDK. This website was designed by me & development is still ongoing.<p>',
+  },
+  {
+    projectTitle: 'RADISH',
+    id: 'radish',
+    theme: 'light',
+    date: '2020',
+    link: 'https://ancient-escarpment-06918.herokuapp.com/search/11205',
+    linkTitle: 'https://www.radishtogo.com/',
+    tags: ['Node', 'EJS', 'Express', 'MongoDB', 'Airtable API', 'Heroku'],
+    imageUrl: 'https://lh3.googleusercontent.com/proxy/2PZp5qA7fvAPtZSb6OhaXHI2TRoVo-pAI8xwMc_sRWs3APqDHFK6C_dcakNWei6o6cXKN_a2ohW5G9fj5ohCmQ5kNpMHhG9N7A3a5PJxd7eZIpwfXXYH8rvK3JW8UECloip6bkl09dnXvx8EXuSY32DknXh0kjBxHvSWRH-NuLc6lrITx6mO53CLK5HOptezyGo',
+    media: [
+      {
+        mediaSrc: 'RADISH_02.png',
+        caption: 'Screenshot of RADISH website search results page, 2021',
+        local: true
+      },
+      {
+        mediaSrc: 'RADISH_03.png',
+        caption: 'Screenshot of RADISH website search results page in mobile, 2021',
+        local: true
+      },
+      {
+        mediaSrc: 'RADISH_04.png',
+        caption: 'Screenshot of RADISH website search results page in mobile, 2021',
+        local: true
+      },
+    ],
+    text: '<p>An online database/directory of New York City based Restaurants offering direct delivery to consumers instead of (or in addition to) food delivery Apps such as Grubhub and Seamless. The project is comprised of the following components:</p><h3>Directory Website</h3><p>A location based directory which allows users to filter search results by restaurant and delivery types. Built with a Node.js Express server, and EJS template rendering. Website designed with <a href="http://riaroberts.net/" target="_blank">Ria Roberts</a>, who was also responsible for the product branding.</p><h3>Database Client</h3><p>This project uses a MongoDB database making API to data managed on an Airtable admin interace. This pattern enables administrators to directly approve, organize, and edit information submitted by participating Restaurants.</p>'
   },
   {
     projectTitle: 'Software Studios',
