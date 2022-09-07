@@ -140,37 +140,6 @@ const data = [
     text: '<p>An online database/directory of New York City based Restaurants offering direct delivery to consumers instead of (or in addition to) food delivery Apps such as Grubhub and Seamless. The project is comprised of the following components:</p><h3>Directory Website</h3><p>A location based directory which allows users to filter search results by restaurant and delivery types. Built with a Node.js Express server, and EJS template rendering. Website designed with <a href="http://riaroberts.net/" target="_blank">Ria Roberts</a>, who was also responsible for the product branding.</p><h3>Database Client</h3><p>This project uses a MongoDB database making API to data managed on an Airtable admin interace. This pattern enables administrators to directly approve, organize, and edit information submitted by participating Restaurants.</p>'
   },
   {
-    projectTitle: 'Software Studios',
-    id: 'software-studios',
-    date: '2019',
-    link: 'https://software-studios.com/',
-    tags: ['Shopify E-Commerce', 'Liquid Templating Language', 'Javascript'],
-    imageUrl: 'software-studios_00.png',
-    media: [
-      {
-        mediaSrc: '392824541',
-        video: true,
-        caption: 'Screen Recording of Software Studios Portfolio and Webstore Splashpage, 2020',
-      },
-      {
-        mediaSrc: 'software-studios_01.png',
-        caption: 'Screenshot of Software Studios Portfolio, 2020',
-        local: true
-      },
-      {
-        mediaSrc: 'software-studios_02.png',
-        caption: 'Screenshot of Software Studios Store, 2020',
-        local: true
-      },
-      {
-        mediaSrc: '514989301',
-        video: true,
-        caption: 'Screen Recording of Software Studios Print Size Toggle, 2020',
-      }
-    ],
-    text: '<p>Custom webstore & portfolio for Software Studios, LLC built on Shopify. Features a custom feature which renders a scale model of print size options and allows users to toggle between variants.<p>',
-  },
-  {
     projectTitle: 'Arial All Typeface',
     id: 'risk-pool',
     date: '2019',
