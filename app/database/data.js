@@ -85,7 +85,7 @@ const data = [
     id: 'kiwi-phong-nguyen-jewelry',
     // theme: 'blue',
     date: '2021–ongoing',
-    link: 'https://kiwi-nguyen.herokuapp.com/',
+    link: '',
     tags: ['React', 'Shopify', 'Shopify Buy SDK'],
     media: [
       {
