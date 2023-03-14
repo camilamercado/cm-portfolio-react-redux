@@ -29,7 +29,7 @@ const data = [
         caption: 'Screenshot of MoMA PS1 website, 2022',
       }
     ],
-    text: '<p>I worked as a primary developer on the MoMA PS1 website after joining the web design & development studio <a href="https://linkedbyair.net">Linked by Air</a> as a software engineer in 2022.</p><p>Linked by Air produced the design and development of the website redesign along with an <a href="https://www.momaps1.org/colophon">extensive team</a> of contributors from PS1, and other outside studios.</p>',
+    text: '<p>I worked as a primary developer on the MoMA PS1 website after joining the web design & development studio <a href="https://linkedbyair.net">Linked by Air</a> as a software engineer in 2022.</p><p>Linked by Air produced the design and development of the website redesign along with a <a href="https://www.momaps1.org/colophon">team</a> of contributors from PS1, and other outside studios.</p>',
   },
   {
     projectTitle: 'Kinfolk History',
